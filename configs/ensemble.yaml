@@ -1,0 +1,13 @@
+id: X4
+reference: B0
+change: "two-stage stacked ensemble: stage-1 domain + per-language gradient-boosting stacker over member scores, encoder window stats, LM and text-statistic features"
+notes: "stacker is trained and scored with group k-fold inside the validation split (out-of-fold predictions), then refit on all validation rows for test"
+seed: 42
+members: [B0, X1, X2, E1, X3]
+domain_source: predicted
+lm_features: true
+text_stats: true
+stack_by: lang
+folds: 5
+model: {max_iter: 300, learning_rate: 0.05, max_leaf_nodes: 15, l2_regularization: 1.0}
+smoke: {eval_docs: 1000}

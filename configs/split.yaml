@@ -1,0 +1,8 @@
+seed: 42
+val_fraction: 0.1
+neighbors: 5
+min_df: 2
+max_df: 0.1
+link_threshold: 0.5
+prefix_words: 10
+prefix_max_docs: 4

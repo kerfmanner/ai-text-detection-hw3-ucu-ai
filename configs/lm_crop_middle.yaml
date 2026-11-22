@@ -1,0 +1,16 @@
+id: X3_crop_middle
+reference: X3_crop_start
+change: "LM features read the middle of texts longer than the token budget"
+notes: "crop ablation for X3 on a smaller sample, run with HW3_ARTIFACTS=artifacts/lm_crop_middle; motivated by the 01_eda fusion profile (German fusion keeps most source text at the start, least in the middle)"
+seed: 42
+observer: Qwen/Qwen2.5-0.5B
+performer: Qwen/Qwen2.5-0.5B-Instruct
+max_tokens: {en-EN: 512, de-DE: 768}
+crop: middle
+segment: 64
+batch_size: 8
+dtype: null
+train_docs: 10000
+eval_docs: 6000
+classifier: {max_iter: 300, learning_rate: 0.05, max_leaf_nodes: 31, l2_regularization: 1.0}
+smoke: {train_docs: 24, eval_docs: 12, max_tokens: {en-EN: 48, de-DE: 64}, batch_size: 4}

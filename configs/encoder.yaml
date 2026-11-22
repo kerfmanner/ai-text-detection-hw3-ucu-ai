@@ -1,0 +1,21 @@
+id: E1
+reference: B0
+change: "fine-tuned XLM-R base; trains on one random 512-token window per text per epoch, predicts by averaging all windows (per-language window cap)"
+notes: "max_chunks from EDA token counts: p99 of windows per text is 8 for English and 4 for German"
+seed: 42
+model_name: FacebookAI/xlm-roberta-base
+max_len: 512
+max_chunks: {en-EN: 8, de-DE: 4}
+train_docs: null
+eval_docs: null
+epochs: 1
+batch_size: 16
+eval_batch_size: 64
+grad_accum: 1
+lr: 2.0e-5
+weight_decay: 0.01
+warmup_ratio: 0.06
+class_weights: balanced
+log_every: 200
+save_model: true
+smoke: {train_docs: 48, eval_docs: 24, max_len: 64, batch_size: 8, eval_batch_size: 16, max_chunks: {en-EN: 2, de-DE: 2}, log_every: 1, save_model: false}

@@ -1,0 +1,20 @@
+id: B0
+reference: null
+change: "reference model: global word TF-IDF (hashing) + classical linear models, small grid search"
+notes: "frozen before any experiment; every experiment is compared against it"
+seed: 42
+search_docs: 40000
+fit_docs: null
+features:
+  word11: {analyzer: word, ngram_range: [1, 1], lowercase: true}
+  word12: {analyzer: word, ngram_range: [1, 2], lowercase: true}
+grid:
+  features: [[word11], [word12]]
+  models:
+    - {name: linear_svc, C: 0.1, class_weight: balanced}
+    - {name: linear_svc, C: 0.3, class_weight: balanced}
+    - {name: linear_svc, C: 1.0, class_weight: balanced}
+    - {name: linear_svc, C: 3.0, class_weight: balanced}
+    - {name: complement_nb, alpha: 0.1}
+    - {name: complement_nb, alpha: 1.0}
+smoke: {search_docs: 2000, fit_docs: 4000, eval_docs: 1000}

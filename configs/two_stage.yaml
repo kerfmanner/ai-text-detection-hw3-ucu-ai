@@ -1,0 +1,11 @@
+id: X2
+reference: B0
+change: "two-stage: stage-1 domain classifier routes each text to a per-domain expert (same features and model as B0)"
+change_given: "two-stage with routing by the given domain column instead of the stage-1 prediction"
+notes: "domains have very different class priors and styles; domains below min_domain_docs fall back to the global model"
+seed: 42
+fit_docs: null
+domain_model: {name: linear_svc, C: 0.3}
+min_domain_docs: 3000
+routings: {predicted: X2, given: X2g}
+smoke: {fit_docs: 4000, eval_docs: 1000, min_domain_docs: 300}

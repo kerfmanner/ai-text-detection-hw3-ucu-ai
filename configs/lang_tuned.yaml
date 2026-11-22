@@ -1,0 +1,30 @@
+id: X1
+reference: B0
+change: "one model per language with its own feature/regularisation search (cased words and char n-grams offered to German)"
+notes: "motivated by EN/DE differences in EDA: German capitalises nouns, compounds words and has only two domains"
+seed: 42
+search_docs: 40000
+fit_docs: null
+langs:
+  en-EN:
+    features:
+      word12: {analyzer: word, ngram_range: [1, 2], lowercase: true}
+      word12_cased: {analyzer: word, ngram_range: [1, 2], lowercase: false}
+    grid:
+      features: [[word12], [word12_cased]]
+      models:
+        - {name: linear_svc, C: 0.3, class_weight: balanced}
+        - {name: linear_svc, C: 1.0, class_weight: balanced}
+        - {name: linear_svc, C: 3.0, class_weight: balanced}
+  de-DE:
+    features:
+      word12: {analyzer: word, ngram_range: [1, 2], lowercase: true}
+      word12_cased: {analyzer: word, ngram_range: [1, 2], lowercase: false}
+      char35_cased: {analyzer: char_wb, ngram_range: [3, 5], lowercase: false, max_chars: 3000}
+    grid:
+      features: [[word12], [word12_cased], [word12_cased, char35_cased]]
+      models:
+        - {name: linear_svc, C: 0.3, class_weight: balanced}
+        - {name: linear_svc, C: 1.0, class_weight: balanced}
+        - {name: linear_svc, C: 3.0, class_weight: balanced}
+smoke: {search_docs: 1500, fit_docs: 3000, eval_docs: 1000}

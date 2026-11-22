@@ -1,0 +1,16 @@
+id: X3
+reference: B0
+change: "open-weight LM likelihood features (observer/performer log-probs, entropy, Binoculars ratio, spread over 64-token segments) + gradient boosting"
+notes: "segment spread targets fusion (partly rewritten text); token budget per language from EDA: Qwen needs 1.85 tokens/word in German vs 1.23 in English"
+seed: 42
+observer: Qwen/Qwen2.5-0.5B
+performer: Qwen/Qwen2.5-0.5B-Instruct
+max_tokens: {en-EN: 512, de-DE: 768}
+crop: start
+segment: 64
+batch_size: 8
+dtype: null
+train_docs: 40000
+eval_docs: null
+classifier: {max_iter: 300, learning_rate: 0.05, max_leaf_nodes: 31, l2_regularization: 1.0}
+smoke: {train_docs: 24, eval_docs: 12, max_tokens: {en-EN: 48, de-DE: 64}, batch_size: 4}
