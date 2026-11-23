@@ -63,7 +63,7 @@ f1e4ff,ai
 396722,ai
 6e532c,ai
 41a70e,fusion
-fc0d71,human
+fc0d71,fusion
 abe01e,fusion
 4c58b8,human
 9b56c0,ai
@@ -113,7 +113,7 @@ d34a69,ai
 6b204a,fusion
 a5673b,ai
 cb049e,ai
-7eda9f,human
+7eda9f,fusion
 224d74,ai
 b1aa4f,ai
 63f5bd,fusion
@@ -296,7 +296,7 @@ d5851e,fusion
 004e3f,ai
 5864c3,ai
 e3bc04,fusion
-5f1ad3,human
+5f1ad3,fusion
 23c19e,fusion
 c37a06,human
 e7f6eb,fusion
@@ -385,7 +385,7 @@ c72e46,human
 de32e0,human
 afca20,ai
 aa3aaa,ai
-d77208,human
+d77208,fusion
 f9f946,fusion
 5d4661,human
 53ad5c,human
@@ -503,7 +503,7 @@ a47c41,fusion
 12dee1,human
 747aec,ai
 7f16cc,ai
-a31736,human
+a31736,ai
 b9f02b,fusion
 90d567,fusion
 e92910,fusion
@@ -561,11 +561,11 @@ d3fb82,human
 228d3b,ai
 73b565,ai
 570538,fusion
-5c9773,fusion
+5c9773,human
 0624c1,fusion
 e30258,ai
 97d1d1,ai
-be2cf8,human
+be2cf8,fusion
 4df202,human
 f583a9,fusion
 e9ddf7,ai
@@ -620,7 +620,7 @@ dace7b,ai
 538e9e,ai
 268870,human
 12ad17,human
-8e4a7b,fusion
+8e4a7b,human
 20557d,ai
 b050c2,human
 cd677e,fusion
@@ -745,7 +745,7 @@ d62a2a,human
 df5923,ai
 65df6c,ai
 2a901f,ai
-ef4dc0,human
+ef4dc0,fusion
 6c390a,ai
 9211b6,fusion
 c7f1ad,human
@@ -760,7 +760,7 @@ d836b6,ai
 84cd57,ai
 be3238,fusion
 8bee15,ai
-af53c1,fusion
+af53c1,human
 751861,fusion
 7eaabb,ai
 8f7ca6,ai
@@ -812,7 +812,7 @@ dbdec1,human
 1aee05,human
 83bd17,ai
 0c277d,ai
-f9919d,human
+f9919d,fusion
 9d8e52,human
 41b060,fusion
 2b6747,ai
@@ -973,7 +973,7 @@ d8d976,human
 84cd49,ai
 5533a9,ai
 2a1b7d,human
-88d152,human
+88d152,fusion
 532368,human
 7959c9,fusion
 e145cc,ai
@@ -1024,7 +1024,7 @@ baa10c,ai
 723a48,human
 c50cf4,ai
 9087c5,ai
-215509,human
+215509,fusion
 3aa06d,fusion
 66cdf2,human
 fcda4c,ai
@@ -1183,7 +1183,7 @@ d3a81c,fusion
 08a17f,human
 625cdf,ai
 ca7398,ai
-400f2e,human
+400f2e,fusion
 30f379,human
 15e8cc,human
 961d9c,fusion
@@ -1233,7 +1233,7 @@ a9d859,ai
 034e30,ai
 cbb0c9,fusion
 9a7741,fusion
-dc9138,human
+dc9138,fusion
 355c67,ai
 d18a80,ai
 7a9b09,fusion
@@ -1332,7 +1332,7 @@ a3957c,human
 23bc82,ai
 3d783a,human
 cae59e,human
-9a7629,fusion
+9a7629,human
 fda10d,ai
 a477a1,ai
 487451,ai
@@ -1383,12 +1383,12 @@ f0101c,human
 410ef1,ai
 1f5cc6,human
 eae568,human
-a3245e,human
+a3245e,fusion
 65d49b,ai
 10c2b2,ai
 a66565,fusion
 f85273,human
-b392ad,fusion
+b392ad,human
 e75195,ai
 09e943,ai
 d080f0,fusion
@@ -1455,7 +1455,7 @@ c26552,ai
 96c073,human
 dcfc02,human
 4cfcf8,ai
-186f18,fusion
+186f18,human
 80702a,ai
 825cc4,ai
 d656a2,human
@@ -1492,7 +1492,7 @@ c9eb65,fusion
 6dbee4,fusion
 539701,ai
 069925,ai
-e20c32,fusion
+e20c32,ai
 adf8ee,human
 237bf5,ai
 3ca6e0,ai
@@ -1792,7 +1792,7 @@ ef72fc,ai
 033d36,human
 8521ef,fusion
 d0d4fb,fusion
-140c6a,fusion
+140c6a,human
 e9091f,ai
 06312a,human
 b318e3,ai
@@ -1946,14 +1946,14 @@ ab96fb,human
 29175c,ai
 ddecef,fusion
 e6cf3b,ai
-474ab0,ai
+474ab0,human
 2046f5,human
 1c7a7a,ai
 022eea,human
 8ce8be,ai
 29e162,ai
 8bf1e8,ai
-ff490e,human
+ff490e,fusion
 7535d5,ai
 6635e9,human
 dbe6e6,fusion
@@ -2052,7 +2052,7 @@ d0caba,ai
 66c885,ai
 5fc615,ai
 8435f3,fusion
-ef4790,fusion
+ef4790,ai
 79ead6,human
 88691f,ai
 328709,human
@@ -2061,7 +2061,7 @@ ef4790,fusion
 73a0d6,fusion
 951128,ai
 049e68,ai
-01aef8,human
+01aef8,fusion
 4d4463,ai
 25c68d,fusion
 150b12,ai
@@ -2149,7 +2149,7 @@ c29e3b,ai
 25b06c,ai
 53d417,ai
 dbc877,ai
-6aeac8,human
+6aeac8,fusion
 785c30,ai
 a91e27,human
 6bc786,human
@@ -2223,7 +2223,7 @@ a0c82d,ai
 66fe87,human
 dc34af,human
 b0f406,human
-9d2f71,human
+9d2f71,fusion
 fa770b,human
 b74364,fusion
 1417ba,human
@@ -2238,7 +2238,7 @@ f4d8ea,ai
 3f2df7,ai
 6f78a6,ai
 10ebc6,fusion
-287f29,fusion
+287f29,human
 93c897,ai
 613959,ai
 4b6be8,fusion
@@ -2368,14 +2368,14 @@ ea6eb0,ai
 271cb0,ai
 859eff,human
 611461,human
-bd8133,human
+bd8133,fusion
 568db0,human
 3e545a,ai
 e237b6,human
 b400cf,ai
 a59fe6,ai
 f1fd35,ai
-a719b5,fusion
+a719b5,human
 7d47fb,fusion
 3be4a6,ai
 84db0c,ai
@@ -2469,7 +2469,7 @@ e022fb,fusion
 930a98,fusion
 7c5f86,ai
 a5bc8e,human
-1ba883,ai
+1ba883,human
 6aa42d,ai
 007b20,human
 255a0f,ai
@@ -2487,7 +2487,7 @@ c05511,ai
 823178,ai
 57aac2,fusion
 1e94cd,human
-af6a29,human
+af6a29,fusion
 2b460e,fusion
 2b464d,ai
 3b7ed7,ai
@@ -2639,7 +2639,7 @@ b3ef31,ai
 3ffdb8,ai
 37e938,fusion
 52198a,human
-fde6d3,human
+fde6d3,fusion
 94fcbf,ai
 b65b24,ai
 39a790,ai
@@ -2741,7 +2741,7 @@ ef8c1c,ai
 01ade6,fusion
 f62824,fusion
 776be5,fusion
-f2f91e,fusion
+f2f91e,human
 8a6479,ai
 c2dd5e,ai
 0d3dc0,ai
@@ -2774,7 +2774,7 @@ d102e7,fusion
 70bf7d,fusion
 d02032,fusion
 419b74,ai
-22bff7,fusion
+22bff7,human
 0b4cef,human
 701f8f,ai
 1158d8,ai
@@ -2912,7 +2912,7 @@ fddc48,human
 bc76e8,ai
 1d2017,ai
 2da917,ai
-202683,human
+202683,fusion
 21fd1d,ai
 6cd6ef,human
 e2fdfa,ai
@@ -2971,7 +2971,7 @@ aebb37,ai
 d03cbf,human
 344421,ai
 b5c060,fusion
-3fa11c,human
+3fa11c,fusion
 052aaf,human
 3fa3a4,fusion
 2302d4,human
@@ -2988,7 +2988,7 @@ a408f0,fusion
 a29cf3,ai
 8b4c72,fusion
 288aea,fusion
-dcc1bb,human
+dcc1bb,fusion
 8080ec,ai
 1b6e7b,ai
 7f88f1,ai
@@ -3087,7 +3087,7 @@ dd9f56,ai
 14ed38,ai
 341d1f,ai
 c77a27,ai
-605abd,fusion
+605abd,ai
 8b9870,ai
 edd89d,fusion
 c15db8,fusion
@@ -3168,7 +3168,7 @@ e18b93,ai
 688396,human
 d8d36d,ai
 098c1e,ai
-e9cb1f,fusion
+e9cb1f,human
 25b52b,ai
 349a23,ai
 05b794,ai
@@ -3265,7 +3265,7 @@ cfb638,fusion
 56f26a,human
 20a7c7,human
 f369cd,human
-d7a76d,human
+d7a76d,fusion
 1c6beb,human
 6f0fa2,fusion
 e9575a,fusion
@@ -3354,7 +3354,7 @@ a9d5b6,ai
 7ebf18,ai
 9c95cd,human
 e227c5,ai
-d8d553,ai
+d8d553,human
 b6ac8a,ai
 9091a6,fusion
 3def1d,human
@@ -3606,7 +3606,7 @@ e2c085,ai
 5a7eb3,ai
 ecd795,ai
 6acea1,ai
-4d0923,human
+4d0923,fusion
 e634d0,ai
 ea4c8b,human
 cc82fd,ai
@@ -3646,7 +3646,7 @@ b45b96,human
 3f3de8,fusion
 ec8548,ai
 30034e,human
-e87721,human
+e87721,fusion
 854670,human
 765389,ai
 4a27f1,ai
@@ -3709,7 +3709,7 @@ b50a18,ai
 59d162,ai
 857c2d,ai
 9ad53f,ai
-f6830c,human
+f6830c,ai
 89cf97,human
 c413d3,ai
 9a568e,ai
@@ -3736,7 +3736,7 @@ ff623e,human
 692961,human
 5fabc9,ai
 d98e62,ai
-8ef204,fusion
+8ef204,human
 ce5961,ai
 80c032,ai
 b68af1,ai
@@ -3753,7 +3753,7 @@ d904ef,fusion
 8c8a88,fusion
 8f4413,human
 961a75,fusion
-6e4250,fusion
+6e4250,human
 13afd3,ai
 7aee06,human
 53cb8c,human
@@ -3777,7 +3777,7 @@ a76bed,fusion
 7c22ec,fusion
 18b72a,human
 14d6ea,human
-07ea30,fusion
+07ea30,human
 040ebc,human
 05dea4,ai
 b27826,fusion
@@ -3947,7 +3947,7 @@ f47cb7,ai
 9f4ff3,fusion
 2de1d3,human
 395027,ai
-9c2d08,fusion
+9c2d08,human
 92c1b0,human
 8357f0,ai
 71446a,human
@@ -4091,13 +4091,13 @@ b50fdf,fusion
 cc61d6,ai
 c5e8dc,human
 cdebec,human
-2f77a0,human
+2f77a0,fusion
 232da8,ai
 acc861,ai
 7e806c,human
 98c53b,ai
 81476c,ai
-7d4c4d,fusion
+7d4c4d,human
 0716be,human
 147a3d,human
 5bcb65,ai
@@ -4124,7 +4124,7 @@ cc2372,ai
 9117b7,ai
 afa05f,ai
 1e156e,ai
-a9fe5e,fusion
+a9fe5e,human
 20e830,ai
 9228be,ai
 492dfd,human
@@ -4149,7 +4149,7 @@ a0447d,ai
 bcebcd,fusion
 f9024c,human
 01ecc4,ai
-804f9d,fusion
+804f9d,human
 8cf484,ai
 513b9c,ai
 13f527,human
@@ -4237,7 +4237,7 @@ f78bdb,fusion
 0e01c1,ai
 1dc0ec,ai
 a8b591,human
-331804,human
+331804,fusion
 bd2e97,fusion
 6c9365,human
 e6c1bf,ai
@@ -4331,10 +4331,10 @@ cf571e,ai
 c6e90b,ai
 2916c6,ai
 3aa0e2,ai
-889cbe,fusion
+889cbe,human
 73ff5b,human
 752186,human
-c78ec5,human
+c78ec5,fusion
 050654,human
 e95e6d,ai
 0876cc,ai
@@ -4351,7 +4351,7 @@ b37165,human
 af2d44,ai
 d2b6b2,ai
 10db7f,ai
-100e1a,fusion
+100e1a,human
 0f199a,ai
 6173b7,ai
 caf3b2,ai
@@ -4361,7 +4361,7 @@ f5bc5f,human
 caca61,fusion
 08f3b5,ai
 d11b8a,fusion
-a444f2,fusion
+a444f2,human
 a8e1c1,ai
 140237,ai
 b97c5b,fusion
@@ -4433,7 +4433,7 @@ b58d2f,human
 66f50a,human
 494b21,ai
 1beb67,ai
-8bf1ba,human
+8bf1ba,fusion
 7b5022,human
 6cdf5c,ai
 44ec96,ai
@@ -4512,7 +4512,7 @@ d4bb17,human
 74ce14,human
 7fcb89,human
 0b61c7,human
-937674,human
+937674,fusion
 b0c2bf,ai
 43b56f,fusion
 93a8ba,fusion
@@ -4551,7 +4551,7 @@ b0051f,human
 8212dd,ai
 2dc3e0,ai
 672a43,fusion
-5a38d6,human
+5a38d6,fusion
 1e0de7,ai
 e7ba94,human
 1deaac,human
@@ -4603,7 +4603,7 @@ c34bb0,ai
 cca71e,human
 0bf05e,human
 024e14,ai
-64652c,fusion
+64652c,human
 be30a9,ai
 035805,human
 240037,fusion
@@ -4852,7 +4852,7 @@ d63cc4,ai
 005325,human
 5c539f,ai
 f129d8,ai
-34e0a4,human
+34e0a4,fusion
 2bcb15,ai
 69e417,human
 a90d79,ai
@@ -4888,7 +4888,7 @@ bb8da9,ai
 32ce51,ai
 05bb1a,ai
 a4268b,fusion
-c4682f,human
+c4682f,fusion
 2e94ae,human
 34d066,human
 49cc76,ai
@@ -5027,8 +5027,8 @@ b759bc,ai
 ee8518,ai
 3b6573,human
 231f9e,human
-59c97c,human
-85aba6,fusion
+59c97c,fusion
+85aba6,human
 1e14bd,human
 f6b897,ai
 628157,ai
@@ -5075,7 +5075,7 @@ b90fb2,ai
 22e675,human
 acd31a,ai
 d2877e,fusion
-308b49,human
+308b49,fusion
 ee053e,ai
 196966,ai
 45c65d,fusion
@@ -5102,7 +5102,7 @@ dc4612,ai
 71e489,ai
 998824,ai
 fccb85,fusion
-572c86,human
+572c86,fusion
 2ec826,human
 4e750e,ai
 d9f57f,human
@@ -5240,7 +5240,7 @@ b30964,ai
 801079,ai
 e6b648,ai
 bbf163,ai
-a6749a,human
+a6749a,fusion
 8fa1dc,fusion
 105a25,ai
 4d6ab1,fusion
@@ -5250,8 +5250,8 @@ f44d1f,human
 d1d617,fusion
 8f22dd,ai
 a30f74,fusion
-5c4676,fusion
-5c917d,fusion
+5c4676,human
+5c917d,human
 e09fc5,ai
 8276b7,ai
 35a7ff,ai
@@ -5309,7 +5309,7 @@ a50e71,fusion
 bf298b,ai
 feea06,ai
 140971,human
-a0ceb9,human
+a0ceb9,fusion
 d3db4b,ai
 2d8d80,ai
 92c1e3,ai
@@ -5533,7 +5533,7 @@ dc827d,ai
 54f946,ai
 4ae687,ai
 99d874,human
-cc120e,human
+cc120e,fusion
 b11320,ai
 fe3ab5,ai
 091788,human
@@ -5567,7 +5567,7 @@ d07974,ai
 31efac,fusion
 45eb28,human
 3d85b7,ai
-90e316,human
+90e316,fusion
 6e10da,ai
 c1015a,human
 fa66c2,fusion
@@ -5643,9 +5643,9 @@ bb12f1,fusion
 3b564d,ai
 42514e,ai
 eee6b0,ai
-23956c,human
+23956c,fusion
 ef1710,ai
-a2e2f6,fusion
+a2e2f6,human
 900e77,fusion
 a7fd23,human
 0c2621,ai
@@ -5754,13 +5754,13 @@ fbc464,ai
 99b6e6,ai
 d09175,ai
 445edd,fusion
-135351,fusion
+135351,human
 0b0342,fusion
 e752ff,fusion
 03acf7,ai
 1d807d,human
 c2dba3,ai
-06e5bf,fusion
+06e5bf,human
 f7fbc4,human
 b2e6ed,ai
 19d650,fusion
@@ -5923,7 +5923,7 @@ e2840b,ai
 888e63,human
 0c8bd9,human
 c88c3a,ai
-a45511,fusion
+a45511,human
 afb517,human
 3ef5e7,ai
 a1a0cb,human
@@ -5973,7 +5973,7 @@ f13340,ai
 66514f,ai
 8d80cc,ai
 68c091,ai
-22b9d5,human
+22b9d5,fusion
 d97de3,human
 3d9e0b,ai
 7ae16e,fusion
@@ -6052,7 +6052,7 @@ dfbbe1,fusion
 1170c9,ai
 b94350,fusion
 d9288a,fusion
-0b50b6,human
+0b50b6,fusion
 30e7b7,fusion
 9fc046,ai
 0e7387,human
@@ -6120,7 +6120,7 @@ bfc8b3,ai
 06f6ca,ai
 9b5205,human
 765f6b,ai
-bf31ef,human
+bf31ef,fusion
 d2a318,ai
 7285dc,human
 f8cab5,ai
@@ -6128,7 +6128,7 @@ a48cab,fusion
 26451a,ai
 3db576,ai
 e973e6,ai
-3639e9,ai
+3639e9,fusion
 ff1005,ai
 99141c,fusion
 9555d6,human
@@ -6150,7 +6150,7 @@ f8ee0b,ai
 da9e67,ai
 147052,human
 ddf9ae,ai
-e33c20,human
+e33c20,fusion
 2a8fc8,ai
 41dfcd,ai
 096dbe,fusion
@@ -6317,7 +6317,7 @@ e4de40,fusion
 0801a2,fusion
 220904,ai
 675490,human
-afb9bc,human
+afb9bc,fusion
 491d67,fusion
 1a7da0,ai
 a0c5ba,ai
@@ -6365,7 +6365,7 @@ c29165,human
 0bd9c6,human
 a89fd0,human
 df622d,fusion
-91cae1,human
+91cae1,ai
 22f28b,ai
 5c581d,human
 501a6f,ai
@@ -6406,7 +6406,7 @@ cc091a,ai
 f6d2ef,human
 52cadd,fusion
 94caa2,fusion
-1d44f4,human
+1d44f4,fusion
 773cf2,fusion
 94607f,ai
 455240,ai
@@ -6471,7 +6471,7 @@ deb159,ai
 179e4e,ai
 6faf4f,fusion
 4058d7,human
-6eb05a,human
+6eb05a,fusion
 2080fc,ai
 f9d73f,ai
 8dd103,fusion
@@ -6543,7 +6543,7 @@ ee76eb,ai
 37c1f6,ai
 cd69cc,fusion
 33b527,human
-44b6d2,human
+44b6d2,fusion
 eaf665,human
 1b3383,ai
 0503cf,ai
@@ -6579,7 +6579,7 @@ e71956,ai
 f59ba6,human
 fe9206,human
 81ddec,human
-a6b5f9,human
+a6b5f9,fusion
 8e1c7c,fusion
 defb43,human
 9292bc,ai
@@ -6609,7 +6609,7 @@ a4653e,fusion
 37f4df,ai
 ed0b5b,ai
 429aac,ai
-16f7c5,fusion
+16f7c5,human
 5f5201,fusion
 9f3dc3,ai
 c74ab6,ai
@@ -6660,7 +6660,7 @@ eb0ff8,human
 461419,ai
 e03ac8,ai
 cbfac9,ai
-017498,human
+017498,fusion
 2ae6b6,fusion
 26d9a0,ai
 304ccc,human
@@ -6822,7 +6822,7 @@ b66f3f,human
 e13e48,fusion
 765d2d,ai
 9354d9,ai
-1f31f7,fusion
+1f31f7,human
 e134a0,ai
 0e78f1,ai
 ba1428,human
@@ -6861,7 +6861,7 @@ df4a2b,fusion
 d3e998,ai
 01d50d,ai
 dfcafa,ai
-148ba1,human
+148ba1,fusion
 3f646f,ai
 d77971,ai
 46b256,ai
@@ -6941,7 +6941,7 @@ ea2285,ai
 0bf188,human
 959a88,ai
 f00006,ai
-7f375c,human
+7f375c,fusion
 8d185b,human
 b58c63,human
 80dd4e,fusion
@@ -7065,14 +7065,14 @@ bbf150,ai
 c77a8b,ai
 6cb752,ai
 f794b3,fusion
-eb8b10,fusion
+eb8b10,human
 7fd235,fusion
 5a857e,ai
 5ee48f,human
 f2458c,ai
 323d98,fusion
 19d196,ai
-786fda,fusion
+786fda,human
 b67b8a,fusion
 b0870c,fusion
 b37a2c,ai
@@ -7098,7 +7098,7 @@ a6aed4,ai
 a930dd,ai
 c3a7cb,ai
 62b9b4,human
-d2ed53,human
+d2ed53,fusion
 6bc380,ai
 35656d,fusion
 e39022,human
@@ -7133,7 +7133,7 @@ b0eb0b,ai
 873980,ai
 3ab385,ai
 ed7163,human
-740fd5,human
+740fd5,ai
 fb465a,human
 b01abf,ai
 a3dc68,ai
@@ -7147,7 +7147,7 @@ f0f219,ai
 a9cb1f,human
 e376be,ai
 479d3d,human
-075a85,human
+075a85,fusion
 a0f29a,human
 ee8b8c,human
 8e17e9,ai
@@ -7179,7 +7179,7 @@ b86f5e,ai
 d2d270,ai
 d3b407,fusion
 12fdd6,ai
-d6b927,human
+d6b927,fusion
 f65bdc,human
 424fdc,fusion
 828a7d,ai
@@ -7262,7 +7262,7 @@ e58ecd,fusion
 8b0d94,ai
 c32928,ai
 9066b3,ai
-345e24,human
+345e24,fusion
 871369,human
 675c62,ai
 790def,fusion
@@ -7340,13 +7340,13 @@ bcdaa0,ai
 566d7e,ai
 c6d62e,ai
 d9acfc,ai
-1b7114,human
+1b7114,fusion
 12c3b9,human
 85e1a8,ai
 5eae45,ai
 01defe,fusion
 92529d,fusion
-9e7d07,human
+9e7d07,fusion
 fd8353,human
 c9ba15,ai
 a2838b,fusion
@@ -7424,7 +7424,7 @@ c6a771,ai
 439f0d,ai
 0e0f88,ai
 b1167b,fusion
-5ff226,fusion
+5ff226,human
 4e5dc8,ai
 4475fa,human
 54e889,ai
@@ -7504,7 +7504,7 @@ b8a616,human
 32afa0,fusion
 abb112,human
 361afb,ai
-263af1,human
+263af1,fusion
 155248,human
 1f56cb,human
 2bf4e7,human
@@ -7516,7 +7516,7 @@ a7f417,fusion
 dac925,ai
 895a1a,human
 7ad779,ai
-e5c57c,ai
+e5c57c,fusion
 9147c4,fusion
 6e2936,fusion
 0984c1,human
@@ -7687,7 +7687,7 @@ a2d8f4,ai
 655d94,ai
 04c303,ai
 80eee0,ai
-5a83de,human
+5a83de,fusion
 fe1904,ai
 fdd873,human
 e4400b,ai
@@ -7777,7 +7777,7 @@ fd351a,human
 677aa8,ai
 09e712,fusion
 9e1460,human
-56fbab,human
+56fbab,fusion
 d12b6f,human
 a781a1,human
 74c930,human
@@ -7791,7 +7791,7 @@ eadc0a,ai
 153f72,fusion
 6050dd,human
 1d6028,fusion
-b50bd1,fusion
+b50bd1,ai
 438635,human
 a9f8fc,ai
 e8e134,ai
@@ -7812,7 +7812,7 @@ e8c0b8,ai
 6161d4,ai
 0aa5de,fusion
 dfbc8b,human
-f07418,ai
+f07418,human
 f58677,human
 0751b8,ai
 5c13ae,ai
@@ -7914,7 +7914,7 @@ fb8c00,human
 eeeb0f,human
 ffe615,human
 b9ddcd,fusion
-578aea,human
+578aea,fusion
 878707,human
 f9ae87,human
 55f353,ai
@@ -8044,7 +8044,7 @@ a1cb2e,fusion
 4d28ec,ai
 22fea8,ai
 946902,ai
-720ded,human
+720ded,fusion
 cca947,ai
 40667c,human
 1fecb6,human
@@ -8077,7 +8077,7 @@ d4b7a8,ai
 a384e1,fusion
 e6bbbb,ai
 ce241c,ai
-43a53a,human
+43a53a,fusion
 b77b30,fusion
 54e859,fusion
 a32beb,ai
@@ -8103,7 +8103,7 @@ a6f6e4,ai
 b2e2e1,ai
 2d8e8a,ai
 419903,fusion
-b5b8fc,human
+b5b8fc,fusion
 23b336,human
 eefcac,human
 055a67,ai
@@ -8200,8 +8200,8 @@ b00b2b,ai
 f876a0,fusion
 58e1cb,ai
 2ed0b2,ai
-7f2628,human
-a8877b,fusion
+7f2628,fusion
+a8877b,human
 efea1a,fusion
 8d4ffb,ai
 f2e163,human
@@ -8312,7 +8312,7 @@ cd3b4d,human
 0a1e08,ai
 021d69,fusion
 c9632b,human
-4ee117,human
+4ee117,fusion
 cfe3b9,ai
 3596e5,human
 1398d3,ai
@@ -8339,7 +8339,7 @@ a85284,fusion
 5f4fb9,ai
 6be0ba,human
 d82555,human
-f4189a,fusion
+f4189a,human
 9d12ae,human
 d169ee,human
 731b52,human
@@ -8409,7 +8409,7 @@ dfb96c,ai
 97a2b5,ai
 67b13d,ai
 b768d4,ai
-0380b7,human
+0380b7,fusion
 235e93,ai
 42ef3f,ai
 981ecd,ai
@@ -8452,7 +8452,7 @@ d0ec06,human
 bdf197,ai
 09db39,fusion
 508011,ai
-b8c537,ai
+b8c537,fusion
 0cafc0,fusion
 78d147,fusion
 bf0eb4,fusion
@@ -8549,7 +8549,7 @@ e2e9b8,fusion
 f4526c,ai
 5f4991,ai
 baa554,human
-49dd5f,human
+49dd5f,fusion
 0749e4,human
 51ba8d,ai
 30ecf6,human
@@ -8563,7 +8563,7 @@ d7ae17,ai
 c5ef12,fusion
 89856f,ai
 94a25c,ai
-d66356,human
+d66356,fusion
 67c992,ai
 f2e0c1,ai
 0929f3,fusion
@@ -8656,7 +8656,7 @@ dc4f83,ai
 7cca75,ai
 d583dc,human
 5bce0d,ai
-3cef90,human
+3cef90,fusion
 65d378,fusion
 a38635,fusion
 8ee8c4,ai
@@ -8755,7 +8755,7 @@ c19fd8,fusion
 e1758c,ai
 c741d4,human
 8e30ae,ai
-742331,fusion
+742331,human
 819a7b,ai
 cc5efe,ai
 9c61b9,fusion
@@ -8789,7 +8789,7 @@ d0749d,ai
 2c13b5,ai
 83b373,ai
 52b031,human
-9a8659,human
+9a8659,fusion
 b3392d,ai
 532ae9,ai
 2f35f7,fusion
@@ -8854,16 +8854,16 @@ fbc315,ai
 171c5e,human
 577d2d,ai
 8c39ed,ai
-d2c1fa,human
+d2c1fa,fusion
 b2355a,fusion
 4f25a3,fusion
 40c6d1,ai
 1e8a48,human
 53d98f,fusion
-bcfdab,fusion
+bcfdab,human
 72b575,fusion
 303235,ai
-0740a3,human
+0740a3,fusion
 c323a4,ai
 0019e6,ai
 02f22a,fusion
@@ -8974,7 +8974,7 @@ d34fce,fusion
 6119b5,ai
 11a5ec,ai
 4103e9,ai
-f22638,human
+f22638,fusion
 1d7f15,fusion
 c0be43,ai
 ca7532,human
@@ -8983,7 +8983,7 @@ d5fea8,fusion
 74d2a4,ai
 1e889c,fusion
 550274,ai
-b4b6d1,human
+b4b6d1,fusion
 30fac2,fusion
 1c8166,human
 1f55fd,fusion
@@ -9014,7 +9014,7 @@ a703ce,ai
 77a493,ai
 adea45,human
 10e64f,ai
-2fd9ad,fusion
+2fd9ad,human
 803300,human
 79b8aa,ai
 e436f6,ai
@@ -9199,7 +9199,7 @@ e64546,fusion
 63cf7d,human
 c3aa52,ai
 d2d1f6,ai
-d58583,human
+d58583,fusion
 bd3b6a,human
 27b6f9,fusion
 bd195d,fusion
@@ -9226,7 +9226,7 @@ a0237b,ai
 0d2220,fusion
 4f9a63,human
 86bb13,ai
-18ab6b,ai
+18ab6b,fusion
 460fb7,human
 d63bee,fusion
 519314,ai
@@ -9253,7 +9253,7 @@ a9bb0c,ai
 ed39c1,human
 1deaec,human
 129639,fusion
-8b6bc5,fusion
+8b6bc5,human
 e3aca4,ai
 e7f399,ai
 de016a,human
@@ -9307,7 +9307,7 @@ b9d114,ai
 9b3ce6,fusion
 013a43,ai
 414438,ai
-3b0304,human
+3b0304,fusion
 d539ee,human
 7ac968,ai
 ea458d,human
@@ -9334,7 +9334,7 @@ d77b79,ai
 8e7554,fusion
 42f962,ai
 efa62a,ai
-e976f3,human
+e976f3,fusion
 505263,human
 73d05f,fusion
 e2d25e,human
@@ -9426,7 +9426,7 @@ fa41af,fusion
 add159,fusion
 e377c2,fusion
 d12f7f,human
-e39411,fusion
+e39411,ai
 49c47a,ai
 b55633,human
 74102c,ai
@@ -9457,7 +9457,7 @@ ba3057,ai
 cc3685,ai
 ee30d3,human
 624577,ai
-7b2f25,fusion
+7b2f25,human
 092271,human
 1234f2,fusion
 00a449,ai
@@ -9553,7 +9553,7 @@ bae623,human
 5b346e,human
 be7fbe,fusion
 3df0e2,human
-4cabd3,human
+4cabd3,fusion
 f8589f,fusion
 698521,fusion
 e823dd,ai
@@ -9584,7 +9584,7 @@ d6f92d,human
 dd4a47,human
 de61ca,ai
 67b76a,ai
-0bb069,human
+0bb069,fusion
 6538c8,fusion
 d88f92,fusion
 747353,fusion
@@ -9625,7 +9625,7 @@ a4e637,ai
 5e60e7,fusion
 9b0752,ai
 b4e566,human
-885e0e,ai
+885e0e,fusion
 0c7be4,fusion
 023c36,ai
 f7c1e3,ai
@@ -9733,7 +9733,7 @@ c62367,ai
 53615b,ai
 129b8b,ai
 32d3c9,ai
-5c4423,fusion
+5c4423,human
 19f30d,human
 19d872,human
 277057,ai
@@ -9802,7 +9802,7 @@ cf43d9,ai
 82b44e,ai
 beed12,fusion
 9bc7a0,human
-273e9e,fusion
+273e9e,human
 377a44,ai
 4a9ab7,fusion
 85be9f,ai
@@ -9842,7 +9842,7 @@ e5de2c,ai
 6844d6,ai
 577e9d,ai
 cb78c5,ai
-4cabf1,fusion
+4cabf1,human
 1b0296,ai
 c496b3,ai
 9bd0c6,fusion
@@ -9877,7 +9877,7 @@ e2e7d8,human
 f3752f,ai
 8a3fc0,ai
 03c909,ai
-e9c243,human
+e9c243,fusion
 e683d0,human
 d2d878,ai
 2d425b,fusion
@@ -9930,7 +9930,7 @@ eb273f,ai
 bf751e,ai
 d3c48b,human
 04ae21,ai
-8cfe7a,human
+8cfe7a,fusion
 e81c9b,ai
 b0155b,ai
 c96e79,ai
@@ -10016,7 +10016,7 @@ a98df2,ai
 311402,human
 9532cf,fusion
 96f9f6,ai
-0cf3b5,human
+0cf3b5,fusion
 66987b,fusion
 603b89,human
 c06ed9,ai
@@ -10040,7 +10040,7 @@ c866fc,ai
 dc0453,human
 36c305,fusion
 173e0e,fusion
-c8fcbe,ai
+c8fcbe,human
 e2a3ad,ai
 b1fece,human
 86eda9,fusion
@@ -10332,7 +10332,7 @@ b5e511,human
 2c3380,human
 d99560,ai
 3a5526,ai
-ed7931,human
+ed7931,fusion
 2199c7,ai
 9fc959,ai
 bca5f3,ai
@@ -10440,7 +10440,7 @@ eb117d,ai
 d14b21,ai
 034c39,fusion
 2af353,human
-a0b20e,fusion
+a0b20e,human
 9a18dc,ai
 d25356,human
 8d948a,ai
@@ -10448,7 +10448,7 @@ bfbc8c,human
 833198,fusion
 bcb2ac,fusion
 e1a632,human
-f9e20a,fusion
+f9e20a,human
 de50c1,fusion
 6315f8,ai
 7b5f1d,fusion
@@ -10499,7 +10499,7 @@ dfc7f4,ai
 fc42d3,ai
 bdd773,ai
 b53fa9,ai
-8c4901,ai
+8c4901,fusion
 e2d480,human
 f9f566,ai
 bf913c,ai
@@ -10631,7 +10631,7 @@ d56871,ai
 351408,human
 0afa57,ai
 974353,human
-d15e62,fusion
+d15e62,human
 c70c28,human
 451874,fusion
 19f9ce,human
@@ -10667,7 +10667,7 @@ c9a1b7,ai
 3b5597,ai
 3a62d6,ai
 f786ff,human
-ce410e,fusion
+ce410e,human
 bb0e3a,ai
 43738b,ai
 205493,ai
@@ -10763,7 +10763,7 @@ b9b3bf,ai
 7c8e75,ai
 77db4b,ai
 a6f2ac,ai
-15c697,fusion
+15c697,human
 64a5d3,ai
 848eae,ai
 710236,ai
@@ -10845,7 +10845,7 @@ e5d1d8,fusion
 e6238d,human
 3c694a,fusion
 07c81a,ai
-6b131f,fusion
+6b131f,human
 85f7f0,human
 3153fd,ai
 f6a075,ai
@@ -10890,7 +10890,7 @@ be379b,ai
 791e37,fusion
 996084,ai
 53e98a,fusion
-a2c56a,fusion
+a2c56a,ai
 05bfb4,ai
 276349,human
 5f35dd,ai
@@ -10959,7 +10959,7 @@ cc7719,human
 a75110,human
 11cbcc,human
 e19f02,fusion
-cae095,fusion
+cae095,human
 5d4351,fusion
 15b891,ai
 f621ee,human
@@ -11045,7 +11045,7 @@ c0365a,ai
 000dda,human
 22aa4f,ai
 a212a3,fusion
-61843d,human
+61843d,fusion
 df73b4,human
 e4996d,human
 540da8,ai
@@ -11106,7 +11106,7 @@ e1c957,ai
 c4a7b3,ai
 bec4a9,fusion
 70a22a,ai
-8c3a47,human
+8c3a47,fusion
 92e68a,fusion
 87067f,ai
 66655c,fusion
@@ -11141,7 +11141,7 @@ cb661a,ai
 402509,ai
 c39499,fusion
 e6f162,fusion
-628c50,human
+628c50,fusion
 cd967a,ai
 b98474,ai
 2f5138,ai
@@ -11196,7 +11196,7 @@ a2256e,ai
 5e74ca,ai
 76ff5f,ai
 27e0c3,ai
-9d48f0,human
+9d48f0,fusion
 182b4e,ai
 8e7e26,human
 84ff0e,human
@@ -11282,7 +11282,7 @@ f2ec86,ai
 1ff1e3,human
 06219b,human
 d3c6fe,human
-28c5e6,fusion
+28c5e6,human
 000aa4,human
 9ef40b,ai
 d86cf5,ai
@@ -11306,7 +11306,7 @@ fb112c,human
 cd90ea,ai
 6e6970,ai
 ee1d19,human
-4a5397,fusion
+4a5397,human
 4b036b,human
 d601af,human
 44408e,fusion
@@ -11397,7 +11397,7 @@ fc3475,ai
 b74174,ai
 1b5c94,ai
 3cdef5,fusion
-e7e4bc,human
+e7e4bc,fusion
 5b8722,human
 6c6661,ai
 c72afe,ai
@@ -11421,7 +11421,7 @@ ce2e56,fusion
 256f76,human
 e21849,ai
 958227,ai
-1e16aa,fusion
+1e16aa,human
 d56e6e,fusion
 3ec2be,fusion
 92dcd4,human
@@ -11456,11 +11456,11 @@ cc2ec7,ai
 6b20c7,fusion
 5bf7ca,ai
 ff4bb1,human
-20565d,human
+20565d,ai
 f5ae91,ai
 c5bbb8,human
 51b3d8,ai
-c37b0d,human
+c37b0d,fusion
 257575,fusion
 ce6d06,ai
 900cdc,fusion
@@ -11631,7 +11631,7 @@ f75b9a,ai
 54f43e,human
 34a9b5,ai
 0b8f11,ai
-f7a4fe,fusion
+f7a4fe,human
 0171dd,fusion
 1528d8,ai
 c60f8b,human
@@ -11855,7 +11855,7 @@ b62689,human
 677e72,ai
 498326,human
 50ac36,ai
-9f51dc,ai
+9f51dc,human
 c5fe52,fusion
 72f205,fusion
 eefe8f,fusion
@@ -11924,7 +11924,7 @@ f28934,ai
 3e65bd,ai
 656158,human
 ee25d1,fusion
-7b55ba,human
+7b55ba,fusion
 c1578c,human
 291038,human
 9d9367,ai
@@ -12031,7 +12031,7 @@ ae73b2,ai
 0cccdd,ai
 ddbfbf,ai
 a29590,fusion
-70a698,human
+70a698,fusion
 32e807,ai
 5f3466,ai
 46756b,fusion
@@ -12039,7 +12039,7 @@ a29590,fusion
 29e471,human
 47ce80,human
 1355b0,ai
-b5a7dd,fusion
+b5a7dd,human
 4bd723,ai
 ff6fc6,ai
 50eba3,human
@@ -12062,7 +12062,7 @@ eade4d,fusion
 d1bace,ai
 183814,human
 cfa3c1,ai
-e733ae,fusion
+e733ae,human
 ed14ea,ai
 eca78d,ai
 26b848,ai
@@ -12070,12 +12070,12 @@ eca78d,ai
 b796ff,human
 ef6670,human
 222a69,human
-b92162,human
+b92162,fusion
 bedada,ai
 4feb4d,ai
 b736ac,ai
 dbda5c,ai
-9d1f01,human
+9d1f01,fusion
 3da30b,ai
 a01e86,ai
 b635c1,human
@@ -12582,7 +12582,7 @@ fcfa68,ai
 9fc187,human
 81e244,human
 284d45,ai
-037a45,fusion
+037a45,human
 0a5419,fusion
 22e751,ai
 eea6cc,ai
@@ -12652,7 +12652,7 @@ b7b4c9,fusion
 1f2b85,ai
 04c72d,ai
 31b16c,human
-228480,fusion
+228480,human
 3a3be3,human
 f7c51e,fusion
 6ff624,human
@@ -12729,7 +12729,7 @@ a2e3f9,human
 83cabc,ai
 50cb72,ai
 75cc59,fusion
-bd5836,fusion
+bd5836,human
 f05f48,ai
 9a7ad2,fusion
 e8c7b7,human
@@ -12780,7 +12780,7 @@ b7c48f,human
 7b42f2,ai
 6c2801,fusion
 ea8d61,ai
-e7532f,fusion
+e7532f,human
 bd63f0,ai
 cacf85,ai
 402be5,ai
@@ -12807,7 +12807,7 @@ c73c11,ai
 0520f3,human
 a395f4,fusion
 a2d98b,human
-06c26f,human
+06c26f,fusion
 775277,human
 dbb479,ai
 67389d,human
@@ -12862,10 +12862,10 @@ e6d1b5,human
 70f40d,ai
 979f6c,ai
 9fa4fc,ai
-89aaea,human
+89aaea,fusion
 6db738,fusion
 0269c0,human
-9ac19c,fusion
+9ac19c,human
 43a2fd,ai
 bec584,human
 14f446,human
@@ -13077,7 +13077,7 @@ ab6df3,fusion
 158297,human
 baa1be,human
 883254,human
-8b4b50,human
+8b4b50,fusion
 99a25b,fusion
 323130,fusion
 bcff57,ai
@@ -13393,7 +13393,7 @@ d6ca29,ai
 64e8cb,human
 4419a4,ai
 aa56a2,human
-1ba95b,human
+1ba95b,fusion
 71a53f,fusion
 c1f596,ai
 785c01,ai
@@ -13415,7 +13415,7 @@ fbf7f1,ai
 78fa96,ai
 1ec9ac,ai
 fcd2d8,ai
-254c02,fusion
+254c02,human
 061d8a,ai
 1db24f,ai
 8677eb,ai
@@ -13457,8 +13457,8 @@ a8ae27,human
 82cbbd,ai
 48d5b4,fusion
 d95a77,human
-0c9d3f,human
-f7050f,human
+0c9d3f,fusion
+f7050f,fusion
 dd3cf1,ai
 603976,ai
 56eacd,ai
@@ -13477,7 +13477,7 @@ c8cd00,human
 8685c1,fusion
 cc695b,ai
 49fe07,human
-6213f8,human
+6213f8,fusion
 afe3b8,human
 20e62f,ai
 c55694,ai
@@ -13670,7 +13670,7 @@ f01a1d,human
 617c1a,ai
 585d80,human
 85c07e,ai
-73b0b4,human
+73b0b4,fusion
 edc233,ai
 df17a2,fusion
 3a879c,fusion
@@ -13766,7 +13766,7 @@ a98e83,ai
 318d4f,ai
 a12fda,fusion
 a85920,ai
-65545c,human
+65545c,fusion
 01cb00,ai
 0e3a10,ai
 d395ce,ai
@@ -13950,7 +13950,7 @@ ac7624,ai
 f61496,ai
 feca4b,ai
 ca18f3,ai
-2492db,ai
+2492db,human
 5ca18d,ai
 36699b,ai
 07e19f,ai
@@ -13981,7 +13981,7 @@ fafb49,fusion
 eba09e,ai
 52fbac,human
 962b9a,ai
-d172d4,ai
+d172d4,human
 a7bdb2,ai
 2588db,ai
 405f41,ai
@@ -14005,7 +14005,7 @@ d75f9c,human
 0ec5b5,human
 debddd,ai
 da33f5,fusion
-beeb6f,fusion
+beeb6f,human
 3f1524,fusion
 5d0bbe,ai
 9e84b7,human
@@ -14039,7 +14039,7 @@ fede3c,human
 cdb0e3,human
 495b03,human
 a3940e,ai
-611ae0,human
+611ae0,fusion
 aa5859,ai
 a015c2,human
 a2e71c,ai
@@ -14071,7 +14071,7 @@ b2e1ad,human
 5306bb,fusion
 91ae6c,fusion
 4338e7,human
-f50f90,human
+f50f90,fusion
 43f01e,ai
 3e02b6,ai
 617d54,ai
@@ -14219,7 +14219,7 @@ e9f7e4,human
 01e843,ai
 0d0e5e,fusion
 7582a4,fusion
-ce8df7,human
+ce8df7,fusion
 f3352f,ai
 3b995a,ai
 a8422f,fusion
@@ -14247,7 +14247,7 @@ efb974,ai
 440d74,ai
 b8025a,ai
 243528,fusion
-0e6ddd,human
+0e6ddd,fusion
 2d83d3,ai
 8b9ca2,ai
 62776c,fusion
@@ -14263,7 +14263,7 @@ b2a9a7,fusion
 fe1fcb,human
 5f9c40,ai
 2c51b4,ai
-54f9ef,human
+54f9ef,fusion
 2507d3,ai
 13d892,ai
 d4ed34,ai
@@ -14274,7 +14274,7 @@ a6f730,ai
 4350e8,human
 eb72b4,fusion
 218ed3,fusion
-aea221,fusion
+aea221,human
 d4fe8a,ai
 3d80a7,human
 3f2162,ai
@@ -14310,7 +14310,7 @@ c8c446,human
 07e66b,ai
 01413c,ai
 dd8fb3,ai
-1f939e,ai
+1f939e,fusion
 badcfa,ai
 9ec832,ai
 5afe58,ai
@@ -14341,7 +14341,7 @@ aed0c5,fusion
 ab47f2,fusion
 0fa0ce,ai
 ff6b2b,ai
-4189e2,fusion
+4189e2,human
 0c59a6,fusion
 cb480b,ai
 9fda52,ai
@@ -14387,7 +14387,7 @@ d94f53,ai
 628e32,ai
 675917,fusion
 a7cc11,ai
-aa329c,human
+aa329c,fusion
 a263bc,ai
 ed8dcf,fusion
 074339,ai
@@ -14464,7 +14464,7 @@ ba183d,fusion
 feb278,human
 e7f7bd,human
 ad6a6f,human
-dc0e00,ai
+dc0e00,human
 5511bf,fusion
 efafe2,ai
 bb1e37,fusion
@@ -14484,7 +14484,7 @@ a895ec,ai
 39c4f1,fusion
 e021e6,human
 ec8141,ai
-2d77e7,fusion
+2d77e7,human
 15d9d0,ai
 426052,ai
 bd78b1,fusion
@@ -14592,7 +14592,7 @@ b3bf75,human
 a52ed9,fusion
 709731,human
 3bdf12,ai
-895055,human
+895055,fusion
 280da0,ai
 338360,ai
 0434d6,fusion
@@ -14612,7 +14612,7 @@ c6f101,human
 b8ed36,ai
 2d3100,ai
 b77c40,fusion
-2bdca0,human
+2bdca0,fusion
 dd4ed2,fusion
 cec105,human
 ad53f5,ai
@@ -14677,7 +14677,7 @@ fd9baf,human
 112b38,ai
 2b2ad3,fusion
 cfd1fc,human
-c64d1d,fusion
+c64d1d,human
 1c4430,human
 838088,ai
 008c88,ai
@@ -14704,7 +14704,7 @@ ac5991,ai
 d8f68f,fusion
 fb42b0,fusion
 450c79,ai
-b19b5f,fusion
+b19b5f,human
 648106,fusion
 5f75cc,ai
 d34b3d,fusion
@@ -14799,7 +14799,7 @@ d0413d,human
 507319,fusion
 67456b,human
 5c4161,human
-ed5bfc,human
+ed5bfc,fusion
 6d7b68,ai
 9a1b60,ai
 620e9e,ai
@@ -14994,7 +14994,7 @@ bc2c36,human
 6f1361,ai
 ee3a87,ai
 158ae0,ai
-7757c6,human
+7757c6,fusion
 84d19a,ai
 45a39a,ai
 f753ad,ai
@@ -15177,7 +15177,7 @@ c62bbc,human
 6819fe,ai
 17b1f0,ai
 d2b231,fusion
-4b83a7,human
+4b83a7,fusion
 221f60,ai
 a305e7,ai
 7c385e,ai
@@ -15315,7 +15315,7 @@ d4e2ce,ai
 5c6080,ai
 c6b658,fusion
 1630d6,ai
-18896d,human
+18896d,fusion
 a4cdce,ai
 bbc7de,ai
 c608a9,ai
@@ -15339,7 +15339,7 @@ dee055,fusion
 f8e236,ai
 80420e,ai
 12ebc5,ai
-141536,ai
+141536,fusion
 f2e859,human
 30f8b6,ai
 c5da19,ai
@@ -15380,7 +15380,7 @@ eedc81,human
 9cafaf,fusion
 fd652c,ai
 95c125,ai
-b86814,human
+b86814,fusion
 8b0e43,ai
 5c5180,fusion
 3e9ffb,ai
@@ -15399,7 +15399,7 @@ d3367b,ai
 93cddc,human
 25f2e8,ai
 3ba415,ai
-32da27,fusion
+32da27,human
 99ab01,fusion
 dcc30c,human
 3c81ad,ai
@@ -15440,7 +15440,7 @@ d7d53d,ai
 df25d4,human
 d080b1,human
 079e10,ai
-939b93,fusion
+939b93,ai
 692990,human
 4455ea,human
 2ce1e3,ai
@@ -15459,7 +15459,7 @@ b2041f,human
 77998e,ai
 634da2,ai
 26c0fd,human
-459a4a,ai
+459a4a,human
 b53781,fusion
 70d2db,fusion
 ee3a45,fusion
@@ -15595,7 +15595,7 @@ b5e13e,ai
 7adc5d,ai
 c1956a,ai
 498cfd,fusion
-0f70ae,human
+0f70ae,fusion
 872f97,ai
 563e60,human
 595a6d,ai
@@ -15674,7 +15674,7 @@ b376c6,fusion
 481655,fusion
 59c343,ai
 fb8d0c,human
-536b1f,human
+536b1f,fusion
 1e87eb,ai
 1a6c5b,ai
 a06b77,human
@@ -15998,8 +15998,8 @@ d592bf,ai
 1c5184,ai
 a73d48,ai
 5bddef,human
-b12c36,human
-bbdcdc,ai
+b12c36,fusion
+bbdcdc,human
 cc0cef,fusion
 4fa933,human
 13af7d,human
@@ -16060,7 +16060,7 @@ a50d4e,human
 3611ce,human
 9bf4d6,ai
 666f34,ai
-a5be14,fusion
+a5be14,ai
 ec8338,human
 2e6032,ai
 9c2e5e,ai
@@ -16072,7 +16072,7 @@ b72028,fusion
 7d36ac,human
 217717,ai
 bc7103,ai
-16b334,human
+16b334,fusion
 83d324,fusion
 0d5e96,human
 cb0cc4,fusion
@@ -16086,7 +16086,7 @@ d85674,ai
 328cb6,human
 b8ffa6,ai
 d43477,human
-857a5e,human
+857a5e,fusion
 243e59,human
 1f0165,human
 2edc1d,ai
@@ -16180,7 +16180,7 @@ aed40b,human
 a75f60,fusion
 b6e797,fusion
 1da034,human
-cf4654,ai
+cf4654,human
 6a1a0b,fusion
 878ba1,ai
 744cad,ai
@@ -16301,7 +16301,7 @@ bc546f,fusion
 aa5a47,human
 861f26,human
 dbb8e9,ai
-2dd072,human
+2dd072,fusion
 ea5074,human
 2a8362,ai
 4484b3,fusion
@@ -16420,7 +16420,7 @@ fa931b,human
 b201d7,human
 c8bf85,ai
 0a5682,human
-b9c45d,fusion
+b9c45d,human
 882481,ai
 e451d9,fusion
 823730,ai
@@ -16631,7 +16631,7 @@ d954e0,ai
 ebc176,ai
 21d4f8,ai
 e45617,fusion
-53fd39,human
+53fd39,fusion
 da314f,fusion
 0c9e7c,ai
 118e32,ai
@@ -16710,7 +16710,7 @@ bfc571,human
 48a986,ai
 44d14e,human
 7d1c84,fusion
-d937ea,human
+d937ea,ai
 5bac7a,ai
 a6cbef,ai
 65e7a1,fusion
@@ -16843,7 +16843,7 @@ e52e9a,human
 cf9ab9,human
 da38aa,ai
 c878b2,human
-af440d,human
+af440d,fusion
 72fed8,ai
 f0aed9,ai
 7e0455,human
@@ -16884,7 +16884,7 @@ af4bff,ai
 8c248e,human
 699d31,human
 399140,human
-9308bb,human
+9308bb,fusion
 c6d707,ai
 0f425d,ai
 e9149c,fusion
@@ -16914,7 +16914,7 @@ aebb26,ai
 78a20b,ai
 19d6ac,ai
 9b8d9e,fusion
-4006ca,fusion
+4006ca,human
 43a014,ai
 cc0204,ai
 e47c9f,fusion
@@ -16977,7 +16977,7 @@ c063bc,ai
 bfff63,human
 961647,ai
 64a91e,ai
-ab2ebf,fusion
+ab2ebf,human
 e429db,ai
 af2d64,fusion
 64b61a,ai
@@ -16989,7 +16989,7 @@ ae08f4,fusion
 0f1162,ai
 a2c250,ai
 9cfc94,ai
-847efb,fusion
+847efb,human
 0f58f4,ai
 7d3158,ai
 62e71c,ai
@@ -17088,7 +17088,7 @@ f35d20,human
 48417a,ai
 a16d50,ai
 3a07e6,ai
-74642a,human
+74642a,fusion
 ee8e77,ai
 cc741a,ai
 685c5c,human
@@ -17321,7 +17321,7 @@ d5241f,fusion
 2100f9,human
 da224c,human
 31a7e0,fusion
-4f7c9d,fusion
+4f7c9d,human
 eec8cd,ai
 75a838,ai
 9b71e4,ai
@@ -17362,7 +17362,7 @@ f80e5c,fusion
 14fa17,ai
 912270,ai
 163b18,human
-467005,human
+467005,fusion
 3e230c,ai
 a42c4c,fusion
 97b67e,ai
@@ -17437,7 +17437,7 @@ b5aa7d,human
 4face8,ai
 0048e2,fusion
 203c41,ai
-57fdc4,human
+57fdc4,fusion
 0f8525,fusion
 39f9dc,ai
 978a6c,ai
@@ -17527,7 +17527,7 @@ d54ee2,human
 619f30,ai
 b69c6d,ai
 a482a4,fusion
-ea7103,human
+ea7103,fusion
 54ebf6,ai
 c68db3,human
 96d75c,human
@@ -17594,7 +17594,7 @@ e346e3,ai
 d93452,human
 3a0788,ai
 46317c,ai
-178cf7,human
+178cf7,fusion
 7f9204,human
 999e37,ai
 d8a817,ai
@@ -17773,7 +17773,7 @@ d73f60,ai
 6cf9c2,fusion
 d8280e,fusion
 54379a,human
-dd3371,human
+dd3371,fusion
 057b0c,ai
 1567cf,fusion
 69f69e,ai
@@ -17789,7 +17789,7 @@ f31ee8,ai
 71f9db,ai
 053076,ai
 4a25fb,ai
-6a4f66,human
+6a4f66,fusion
 7d67ee,ai
 90ca18,human
 aec250,ai
@@ -17842,7 +17842,7 @@ ac6ad9,fusion
 a23fdc,ai
 ca56c9,human
 d94e75,human
-d1a632,human
+d1a632,fusion
 6487ea,ai
 098526,ai
 f3efed,human
@@ -17994,7 +17994,7 @@ c880f3,ai
 807946,ai
 8dee32,ai
 fe477f,ai
-03856f,human
+03856f,fusion
 f0b823,ai
 55cee4,human
 152e58,ai
@@ -18015,7 +18015,7 @@ e29521,fusion
 21d6fc,ai
 6e0c46,human
 4f4295,ai
-6772aa,fusion
+6772aa,human
 5957c5,ai
 964175,fusion
 d4d890,ai
@@ -18033,7 +18033,7 @@ b409c0,human
 5d18db,ai
 6a0992,ai
 b4c00c,ai
-8e41be,human
+8e41be,fusion
 aa8750,human
 5da9dc,ai
 f817b1,fusion
@@ -18046,7 +18046,7 @@ bc68a2,ai
 61fa43,human
 72f6e1,ai
 5988fe,human
-fbb01a,human
+fbb01a,fusion
 7edb6a,human
 a0d9f4,fusion
 b7cc24,human
@@ -18080,7 +18080,7 @@ e07d5e,ai
 cf0e31,ai
 6faeeb,human
 30a4de,fusion
-43c777,fusion
+43c777,human
 074f47,human
 1a39b7,human
 27d808,ai
@@ -18095,7 +18095,7 @@ f66121,ai
 304cbe,ai
 4b2e50,ai
 1ee1ee,fusion
-5af13d,human
+5af13d,ai
 f65bf6,ai
 9ad9e9,ai
 e24fd8,ai
@@ -18138,7 +18138,7 @@ dea041,fusion
 107cc1,ai
 5d2b82,ai
 79f583,ai
-3f3147,fusion
+3f3147,human
 16c85d,human
 be2673,ai
 136d62,ai
@@ -18329,7 +18329,7 @@ dfa3b3,human
 7e1e3a,human
 cd407d,fusion
 ddc7dc,human
-969591,human
+969591,fusion
 71cd9c,human
 c4710e,human
 31ca8a,ai
@@ -18428,7 +18428,7 @@ bb7c29,human
 381f51,fusion
 9917c9,ai
 7ca640,ai
-86dd02,fusion
+86dd02,human
 eb4594,ai
 8e665a,ai
 7789a0,ai
@@ -18758,7 +18758,7 @@ b18032,human
 3bcf12,fusion
 6e81d5,ai
 dd31a8,human
-50746c,human
+50746c,fusion
 64e8c9,fusion
 902bc1,fusion
 279731,ai
@@ -18791,7 +18791,7 @@ a6a689,human
 fef6f4,ai
 c647c9,human
 a3e7cf,ai
-2de88b,fusion
+2de88b,human
 97ec91,human
 e3233a,human
 442eec,ai
@@ -18833,7 +18833,7 @@ c72dd4,ai
 31c02b,fusion
 20c09f,human
 abaa5e,ai
-6daa8c,human
+6daa8c,fusion
 a2595d,ai
 b72e4d,fusion
 db91c8,human
@@ -18932,7 +18932,7 @@ bf3ad5,ai
 32c9b0,human
 7c80c2,ai
 7a9e78,ai
-6023ab,ai
+6023ab,human
 c23dcd,human
 1948e7,human
 3e9b28,ai
@@ -19104,9 +19104,9 @@ fef228,fusion
 64b815,human
 3119c9,ai
 996437,ai
-2f4f09,fusion
+2f4f09,ai
 aed193,ai
-75faab,fusion
+75faab,human
 078908,ai
 7dc282,human
 a439cb,ai
@@ -19301,9 +19301,9 @@ ce57f1,ai
 e7cb51,ai
 1add74,ai
 d65eb5,ai
-e8fce4,fusion
+e8fce4,ai
 96043b,fusion
-703561,human
+703561,fusion
 0aab85,human
 8be37e,ai
 2f023a,human
@@ -19338,7 +19338,7 @@ c9263a,human
 4e0889,ai
 d9b63b,fusion
 1cea25,human
-1fda51,fusion
+1fda51,human
 0d30c2,fusion
 9e4aad,human
 cdde0a,ai
@@ -19353,7 +19353,7 @@ e8c12c,human
 2bcf7d,ai
 ef4786,ai
 b59d92,fusion
-eb1b49,human
+eb1b49,fusion
 b527a0,ai
 137090,ai
 af9323,ai
@@ -19558,7 +19558,7 @@ cbf67d,ai
 b23e04,fusion
 3dd69f,ai
 96f0da,ai
-0c34da,human
+0c34da,fusion
 490796,ai
 ce0cd5,ai
 f34079,human
@@ -19696,7 +19696,7 @@ a5c334,fusion
 65a5a5,fusion
 d4af20,fusion
 7af6a4,human
-87ba2a,fusion
+87ba2a,human
 2e414b,ai
 7639d6,human
 50db5d,ai
@@ -19737,7 +19737,7 @@ d754d0,human
 ee0f1b,human
 66e803,ai
 651f92,human
-10a83f,human
+10a83f,fusion
 7e48a5,ai
 d2d765,ai
 379dce,ai
@@ -19764,12 +19764,12 @@ b53366,human
 d5d188,fusion
 257dcc,ai
 dc77f8,fusion
-fc0a81,fusion
+fc0a81,human
 1ddbda,ai
 2940b0,ai
 394ddb,human
 5ee896,ai
-693f5f,fusion
+693f5f,human
 4f6da0,ai
 81794c,ai
 d5475d,human
@@ -19781,7 +19781,7 @@ dca50a,fusion
 5efe52,ai
 490910,human
 fdab8b,human
-849660,human
+849660,fusion
 4e41b3,human
 ac4a95,ai
 a37936,human
@@ -19823,9 +19823,9 @@ f3233a,ai
 8dd22e,fusion
 ff363c,ai
 7801f4,ai
-e033bf,human
+e033bf,fusion
 962773,human
-55feea,human
+55feea,fusion
 b9a48c,ai
 0eccb4,human
 f2e062,fusion
@@ -19946,7 +19946,7 @@ e73ef7,human
 04363a,ai
 555b01,human
 ca8e56,ai
-5cffb9,fusion
+5cffb9,human
 179cd4,ai
 c0dc3b,fusion
 213ae1,human
@@ -20076,7 +20076,7 @@ dbdc70,ai
 d09eae,fusion
 0fbc55,human
 cb3bce,ai
-7bb56e,fusion
+7bb56e,human
 0b4049,human
 957c44,ai
 f43910,human
@@ -20120,7 +20120,7 @@ fad279,ai
 614bbc,ai
 0f17c8,ai
 b909ee,human
-0c88c3,human
+0c88c3,fusion
 650198,human
 5a3949,ai
 27fe40,ai
@@ -20162,7 +20162,7 @@ fe184d,fusion
 3dbd07,fusion
 12ee98,ai
 78f89a,ai
-d250a9,ai
+d250a9,fusion
 dc8555,ai
 bf4d88,human
 5af70a,ai
@@ -20434,7 +20434,7 @@ d2f931,ai
 3634db,ai
 78b9f7,human
 771231,ai
-168ec1,fusion
+168ec1,human
 bf9cbe,ai
 684423,fusion
 3066f6,ai
@@ -20458,7 +20458,7 @@ b884bf,ai
 47016c,fusion
 1eb579,ai
 f43985,human
-f47973,human
+f47973,fusion
 0dd54d,ai
 1d7945,fusion
 96c186,fusion
@@ -20483,7 +20483,7 @@ cd5ed7,fusion
 f74131,fusion
 15114c,human
 2158c0,fusion
-7bbeb8,fusion
+7bbeb8,ai
 68b3be,ai
 bc0fd6,human
 aa7741,ai
@@ -20521,7 +20521,7 @@ a76a6c,fusion
 1ffc72,fusion
 12ccb9,ai
 6e1c78,human
-4f76a2,human
+4f76a2,fusion
 061d77,ai
 a29b7f,fusion
 48247c,human
@@ -20585,7 +20585,7 @@ cd3e6e,fusion
 25eeb0,ai
 9aab03,human
 5dcb68,ai
-e2f10f,human
+e2f10f,fusion
 d127b3,fusion
 621e91,human
 670c5f,fusion
@@ -20728,7 +20728,7 @@ ce5053,ai
 ffff91,fusion
 e68e9b,ai
 29689c,ai
-2396ce,human
+2396ce,fusion
 94e4a2,fusion
 22dc74,human
 1041c0,ai
@@ -20868,12 +20868,12 @@ bab2dd,human
 506256,fusion
 830008,human
 e9b505,human
-15cba6,fusion
+15cba6,human
 cfcf18,fusion
 60e827,ai
 321a7f,human
-ed5d88,fusion
-317738,human
+ed5d88,human
+317738,fusion
 cdacec,human
 ab650d,ai
 6a7f0e,human
@@ -21012,7 +21012,7 @@ a58930,ai
 aa59c2,ai
 7cbe75,fusion
 67323b,ai
-bc2a76,fusion
+bc2a76,human
 2dc047,ai
 42c077,human
 9ab85e,fusion
@@ -21021,7 +21021,7 @@ bc2a76,fusion
 12aff7,human
 f49fdf,fusion
 fa9139,human
-184206,human
+184206,fusion
 4e9280,fusion
 6a0056,fusion
 670cdf,human
@@ -21073,7 +21073,7 @@ bddddd,human
 6547c9,ai
 06b23e,ai
 86389a,ai
-cc933d,human
+cc933d,fusion
 47c46f,fusion
 f595be,human
 d12da9,fusion
@@ -21162,7 +21162,7 @@ e78a01,ai
 b8be5a,ai
 89f3e0,ai
 7691ce,ai
-c12b51,human
+c12b51,fusion
 767fb3,ai
 a1ec10,human
 5d5147,ai
@@ -21228,7 +21228,7 @@ f1fcf9,human
 1789e7,ai
 90a4e4,ai
 fd0736,ai
-0bd658,human
+0bd658,fusion
 eb76c9,human
 c16db8,fusion
 5cf1d7,ai
@@ -21255,7 +21255,7 @@ dd8c1f,ai
 9041f6,human
 433b0d,human
 03a37f,ai
-6a36f8,human
+6a36f8,fusion
 9690a8,ai
 7e8428,human
 41ca81,ai
@@ -21372,7 +21372,7 @@ f3c488,ai
 37439b,fusion
 b87d71,fusion
 253966,fusion
-9ca3fb,fusion
+9ca3fb,human
 b473d9,ai
 428072,ai
 79c146,ai
@@ -21532,7 +21532,7 @@ e3b2bf,human
 d4abaf,human
 88568e,fusion
 a6688e,human
-049ca9,fusion
+049ca9,human
 9eee90,ai
 a1b8ed,ai
 7d0933,human
@@ -21575,7 +21575,7 @@ a11130,ai
 8a922c,human
 d897aa,ai
 076e5f,human
-2b3688,fusion
+2b3688,human
 5ba1bf,ai
 0d9f84,human
 42b0c9,ai
@@ -21635,7 +21635,7 @@ af7123,human
 bb46c3,human
 a47421,fusion
 f74821,fusion
-cafc54,fusion
+cafc54,human
 97982c,ai
 aebd01,fusion
 33a2a8,fusion
@@ -21806,7 +21806,7 @@ f9926a,fusion
 eb7bbc,ai
 c68231,fusion
 1d537f,ai
-20f7c8,human
+20f7c8,fusion
 a568d0,human
 90ad0d,human
 439274,human
@@ -21864,7 +21864,7 @@ b330ff,ai
 9a4492,human
 0a6a16,ai
 78305b,fusion
-bd5e60,fusion
+bd5e60,human
 42701b,fusion
 8a8c9a,ai
 5262d6,ai
@@ -21919,7 +21919,7 @@ f05d18,fusion
 f840ae,ai
 680459,ai
 cc7756,human
-b8d0a3,human
+b8d0a3,fusion
 b0e939,ai
 077f68,ai
 594bc7,ai
@@ -22172,7 +22172,7 @@ ca5717,human
 2b06a5,human
 30d17e,ai
 c0b569,ai
-cc5700,human
+cc5700,fusion
 f332eb,ai
 c04c3c,ai
 585768,ai
@@ -22200,7 +22200,7 @@ a21b63,ai
 73f52e,ai
 5dd10a,ai
 fb34ff,ai
-1d665c,fusion
+1d665c,human
 ada3f0,fusion
 41ad57,ai
 23f637,human
@@ -22216,7 +22216,7 @@ e3ed74,fusion
 27bc47,ai
 6ada0f,fusion
 f16bb6,fusion
-c9bca7,fusion
+c9bca7,human
 70cc33,ai
 f320f5,human
 d4c2a0,human
@@ -22242,7 +22242,7 @@ e62706,fusion
 193cb0,ai
 12ad0a,ai
 f3423b,human
-ea73ae,human
+ea73ae,fusion
 6b3abb,human
 4f0e29,human
 e0c087,human
@@ -22255,7 +22255,7 @@ ae6642,fusion
 deb18c,human
 b8b823,fusion
 8d61ff,fusion
-bff437,human
+bff437,fusion
 c742d2,ai
 451480,fusion
 86d555,fusion
@@ -22459,7 +22459,7 @@ a4b086,ai
 a04a23,ai
 530c55,ai
 fd4fe6,ai
-61fe86,human
+61fe86,fusion
 adcd1a,ai
 60620d,ai
 af6434,human
@@ -22469,7 +22469,7 @@ a48c77,human
 bd53c2,ai
 58b86d,ai
 8c1121,ai
-e43523,human
+e43523,fusion
 e9a97b,ai
 20333d,fusion
 37bad3,human
@@ -22485,7 +22485,7 @@ a803b1,human
 be0b63,fusion
 363f56,fusion
 eb613c,fusion
-e295dc,fusion
+e295dc,human
 af92fe,fusion
 78b791,ai
 cd690a,human
@@ -22498,11 +22498,11 @@ c08da6,ai
 fbbf2e,fusion
 918068,fusion
 5063eb,fusion
-5c6000,fusion
+5c6000,human
 328db3,human
 1dfafc,ai
 1e85ce,ai
-64123a,human
+64123a,fusion
 79be6c,human
 215cbb,ai
 7df159,ai
@@ -22655,7 +22655,7 @@ b9672d,human
 8c8f90,fusion
 7116d0,human
 32fba0,human
-f91436,human
+f91436,fusion
 1dba00,ai
 8d2023,fusion
 f30bf8,human
@@ -22667,7 +22667,7 @@ adaa87,ai
 276796,fusion
 960e5a,ai
 1aebab,ai
-b7e47b,human
+b7e47b,fusion
 363ace,ai
 e95930,ai
 427405,ai
@@ -22748,7 +22748,7 @@ ef9283,fusion
 5500b5,human
 781e3c,fusion
 e8c7bd,fusion
-5cc329,human
+5cc329,fusion
 2d2eef,human
 11451b,fusion
 d245ec,human
@@ -22771,7 +22771,7 @@ d9c9df,human
 9b40bf,human
 eff452,ai
 2da70c,ai
-262d27,human
+262d27,fusion
 7096d4,human
 8bc842,ai
 12d837,ai
@@ -22849,7 +22849,7 @@ c1ae5f,ai
 4c5125,ai
 d5fb67,fusion
 d27298,ai
-20c7c8,fusion
+20c7c8,human
 39d16f,ai
 b346c2,fusion
 b994cf,human
@@ -22862,7 +22862,7 @@ a6be6d,human
 9a1dac,ai
 75131a,human
 fc5b0c,fusion
-faff99,human
+faff99,fusion
 0df952,ai
 861d63,human
 2bf1f3,fusion
@@ -22873,7 +22873,7 @@ f82cc2,fusion
 75b460,fusion
 2f4456,ai
 f1741f,ai
-4659a0,fusion
+4659a0,human
 6ba4f1,human
 b983ce,ai
 ef7d1c,ai
@@ -22887,7 +22887,7 @@ c12fbd,human
 d3c794,ai
 ae7a30,human
 00d996,ai
-02c967,human
+02c967,fusion
 26ccc2,human
 75f562,ai
 21ef5b,human
@@ -23031,7 +23031,7 @@ b68050,ai
 a67187,human
 59674d,fusion
 2d7f9f,human
-3f38fa,fusion
+3f38fa,human
 0b34f8,ai
 13b715,fusion
 9c050d,fusion
@@ -23104,7 +23104,7 @@ b728b4,human
 65752a,ai
 32fa83,ai
 d244b2,ai
-56f689,human
+56f689,fusion
 9a9772,ai
 76f939,ai
 7c9146,ai
@@ -23186,7 +23186,7 @@ d51974,fusion
 b21256,ai
 fe049a,fusion
 aa4242,ai
-fd4e4c,ai
+fd4e4c,fusion
 79ba1b,fusion
 4f9c05,ai
 23ebba,fusion
@@ -23286,7 +23286,7 @@ b2ab7e,human
 ae95a6,ai
 0a67d7,ai
 a70ac4,fusion
-02809f,fusion
+02809f,human
 a2423e,fusion
 16bff9,fusion
 2a8568,fusion
@@ -23338,10 +23338,10 @@ a45ef0,ai
 bf9804,fusion
 642166,human
 cb4e35,ai
-033bde,human
+033bde,fusion
 644db1,fusion
 975c4a,human
-27ab6d,human
+27ab6d,fusion
 2b0aae,fusion
 a808c3,fusion
 7f53f9,fusion
@@ -23383,7 +23383,7 @@ ec4c2d,human
 ae8558,ai
 26b069,ai
 f82dad,fusion
-f8dc14,human
+f8dc14,fusion
 127ace,ai
 c95278,human
 2c2962,fusion
@@ -23401,7 +23401,7 @@ e13b15,human
 ccdfab,fusion
 58b4ad,fusion
 eac562,ai
-90adcf,human
+90adcf,fusion
 2a9e20,human
 1fd78c,ai
 39e742,ai
@@ -23431,7 +23431,7 @@ ce7416,fusion
 19b0fd,human
 e15fb3,ai
 6a0b25,fusion
-544064,fusion
+544064,human
 edfd9e,human
 c04a98,ai
 4cf05e,ai
@@ -23503,7 +23503,7 @@ f840e5,ai
 cc7601,ai
 0e37b1,ai
 0807b5,ai
-1a8747,fusion
+1a8747,human
 fdfdc2,ai
 2aafc7,fusion
 315b91,human
@@ -23783,7 +23783,7 @@ c63694,ai
 8d50fb,ai
 4d502d,human
 f88efc,ai
-80f63b,fusion
+80f63b,human
 5336fb,ai
 99bbb0,ai
 a22e48,fusion
@@ -23956,7 +23956,7 @@ eec171,fusion
 462b01,human
 674f10,fusion
 bb8955,ai
-5988ca,ai
+5988ca,fusion
 e88c41,human
 0118b3,ai
 720a08,ai
@@ -23980,7 +23980,7 @@ a0f316,human
 7f5a4c,human
 b95059,ai
 fbac70,ai
-07500a,fusion
+07500a,ai
 5cdeb1,ai
 6c30a4,ai
 b45a4f,ai
@@ -24072,7 +24072,7 @@ e1be80,ai
 363e84,fusion
 25ae34,fusion
 893c73,fusion
-3aef37,fusion
+3aef37,human
 9edd83,ai
 88ce77,human
 256428,ai
@@ -24232,7 +24232,7 @@ ec3263,fusion
 9aadf7,fusion
 15800b,human
 65fcf1,fusion
-ed07a2,fusion
+ed07a2,human
 e0331f,ai
 3cfb51,human
 d57f7e,ai
@@ -24270,7 +24270,7 @@ fe8374,fusion
 d0930a,human
 8b0edb,ai
 06d6de,ai
-028c7b,human
+028c7b,fusion
 645ec0,ai
 c85dff,human
 e4e2e5,fusion
@@ -24588,7 +24588,7 @@ a8d7f8,ai
 00f278,ai
 6f5054,ai
 88ff60,fusion
-fb8633,human
+fb8633,fusion
 a599de,ai
 3389e9,human
 8ac443,human
@@ -24781,12 +24781,12 @@ cec680,fusion
 280d8f,human
 ded36f,fusion
 240659,ai
-0d59f0,fusion
+0d59f0,human
 25f633,ai
 b6b915,fusion
-177386,fusion
+177386,human
 7acb4a,ai
-b116b3,human
+b116b3,fusion
 1d2d77,human
 48486f,human
 747066,ai
@@ -24935,14 +24935,14 @@ f804d8,ai
 10ef75,fusion
 bbed99,ai
 2502d6,human
-d0513f,human
+d0513f,fusion
 afd9a7,human
 bb8fff,ai
 45e623,ai
 ab63d9,ai
 090304,ai
 1f4e9e,human
-37db1f,fusion
+37db1f,human
 475732,fusion
 0dfba7,fusion
 a0fea8,ai
@@ -24952,7 +24952,7 @@ a9e2f4,ai
 ae1070,fusion
 56915d,human
 13841b,ai
-79b5a9,human
+79b5a9,fusion
 a0e190,fusion
 53952c,fusion
 0c36d3,human
@@ -24982,7 +24982,7 @@ c427c0,ai
 111dc3,ai
 006af0,ai
 3b0de5,ai
-9bdf79,ai
+9bdf79,human
 77ca63,ai
 cfcaa5,fusion
 c7b9f5,ai

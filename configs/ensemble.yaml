@@ -1,6 +1,6 @@
 id: X4
 reference: B0
-change: "two-stage stacked ensemble: stage 1 diverse base models (word/char TF-IDF, per-language, per-domain, label cascade, sentence model, encoder, LM features); stage 2 per-language gradient-boosting stacker over their scores, the given domain, encoder window stats, LM and text-statistic features"
+change: "two-stage stacked ensemble: stage 1 diverse base models (word/char TF-IDF, per-language, per-domain, label cascade, sentence model X7, text-level encoder E1, token-level encoder E2, LM likelihood classifier X3); stage 2 per-language gradient-boosting stacker over their scores and summaries (E1 window stats, E2 token-probability summaries, X7 sentence-score summaries), the given domain and text statistics"
 notes: "stacker is trained and scored with group k-fold inside the validation split (out-of-fold predictions), then refit on all validation rows for test"
 seed: 42
 members: [B0, X1, X2g, X5, X6, X7, E1, E2, X3]

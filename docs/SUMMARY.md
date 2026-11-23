@@ -110,7 +110,8 @@ Validation macro-F1 of the single models:
 | X8 masked n-grams | 0.8667 | 0.811 | 0.982 | 0.807 |
 | X7 sentence model | 0.9077 | 0.871 | 0.983 | 0.870 |
 | S1 = stack of B0 + X6 + X8 on train OOF | 0.9098 | 0.863 | 0.993 | 0.873 |
-| E1 XLM-R | **0.9304** | 0.888 | 0.993 | 0.911 |
+| E1 XLM-R | 0.9304 | 0.888 | 0.993 | 0.911 |
+| E2 token-level XLM-R | **0.9329** | 0.896 | 0.992 | 0.911 |
 
 - **X2g per domain:** experts help arXiv (0.849 → 0.879) and house_of_commons (0.873 → 0.887) but hurt gutenberg EN (0.737 → 0.691), so the overall score barely moves. Per-domain models are more useful as ensemble members than as replacements.
 - **X5:** the best single CPU model, +0.018 over B0, and its dedicated stage 1 also raises ai F1.
@@ -123,6 +124,20 @@ Validation macro-F1 of the single models:
   - **Sentence labels:** only half of the fusion texts (42k of 83,682) have a human source among their neighbours at cosine ≥ 0.5. Their sentences are bimodal: about 77% are copied unchanged and 15–23% fully rewritten (word 3-gram share ≤ 0.1), with almost none in between. Stage 1 is fitted on 1.07M original, 83k rewritten and 1.13M ai sentences.
   - **Sentence level:** sentence F1 on validation pairs is original 0.917, ai 0.894 and rewritten only 0.305. Rewritten sentences are hard to recognise one by one.
   - **Text level:** the per-text summaries still separate human from fusion well (human 0.871, fusion 0.870 vs 0.827 / 0.836 for X5).
+- **E2 is the strongest single model**, +0.0025 over E1, even with a fixed rule instead of a fitted classifier on its token summaries.
+  - **Token level:** token F1 on validation is original 0.990, rewritten 0.887 and ai 0.997. Rewritten words are recognised in context far better than rewritten sentences on their own (X7: 0.305).
+  - **By domain:** E2 is better than E1 on arXiv (0.805 vs 0.628), bundestag, euro_court_cases and house_of_commons, and worse on cnn_news and student_essays.
+  - **Lightly rewritten fusion:** share of validation fusion texts with a known source that are called human, by share of rewritten words:
+
+    | rewritten words | n | E1 | E2 | X4 without E2 | X4 with E2 |
+    |---|---|---|---|---|---|
+    | ≤ 5% | 505 | 0.329 | 0.469 | 0.434 | 0.386 |
+    | 5–10% | 541 | 0.137 | 0.067 | 0.113 | 0.100 |
+    | 10–20% | 1183 | 0.053 | 0.009 | 0.026 | 0.017 |
+    | > 20% | 1965 | 0.010 | 0.002 | 0.004 | 0.004 |
+
+    E2 removes most errors above 5% rewritten. Below 5% it is worse than E1 alone: a few rewritten words do not lift the 16-token moving-average peak. The stacker still gains there.
+  - **Errors differ from E1's:** E1 and E2 are both wrong on 2.5% of texts and only one wrong on 6.4%.
   - **By domain:** X7 is strongest where E1 is weak, for example arXiv 0.910 vs 0.628, gutenberg EN 0.939 vs 0.861 and euro_court_cases 0.945 vs 0.901.
   - **Error overlap with E1:** both are wrong on 1.9% of texts, the lowest of any pair.
 - **X8 (masked n-grams)** matches B0 (0.8667 vs 0.8657) with no topic words. 1,000 kept words beat 300 (0.829 vs 0.812 on the 20k search). C = 1 is the edge of the grid, so a larger C may be slightly better. It is better than B0 on arXiv (0.889 vs 0.849) and house_of_commons (0.899 vs 0.873), and worse on gutenberg EN (0.651 vs 0.737). It is wrong on different texts than B0: both wrong on 6.7%, only one wrong on 9.4%.
@@ -164,18 +179,23 @@ Validation macro-F1 of the single models:
   | E1 + X5 + X6 + X3 | 0.9592 | 0.9595 | | | |
   | E1 + X6 | 0.9594 | 0.9598 | | | |
   | E1 only (+ domain, window stats, text stats) | 0.9584 | 0.9578 | 0.935 | 0.996 | 0.944 |
-  | all + X7 (current `ensemble.yaml`) | **0.9612** | 0.9608 | 0.939 | 0.997 | 0.948 |
+  | all + X7 | 0.9612 | 0.9608 | 0.939 | 0.997 | 0.948 |
   | all + X7, without E1 | 0.9243 | 0.9244 | 0.886 | 0.993 | 0.894 |
   | all + X7 + X8 | 0.9614 | 0.9615 | 0.939 | 0.997 | 0.948 |
   | all + X7 + S1 | 0.9610 | 0.9612 | 0.938 | 0.997 | 0.948 |
   | all + X7 + X8 + S1 | 0.9611 | 0.9607 | 0.938 | 0.997 | 0.948 |
   | all + X7, S1 instead of B0 and X6 | 0.9615 | 0.9613 | 0.939 | 0.998 | 0.948 |
   | all + X7 + X8 + S1, without E1 | 0.9292 | 0.9290 | 0.892 | 0.994 | 0.901 |
+  | all + X7 + E2 (current `ensemble.yaml`) | **0.9656** | 0.9655 | 0.946 | 0.998 | 0.954 |
+  | all + X7 + E2, without E1 | 0.9588 | 0.9585 | 0.935 | 0.997 | 0.944 |
+  | E1 + E2 | 0.9638 | 0.9645 | 0.943 | 0.997 | 0.952 |
+  | E2 only (+ domain, text stats) | 0.9557 | 0.9556 | 0.930 | 0.996 | 0.941 |
 
   - Most of the gain from E1 alone (0.930) to the ensemble (0.960) comes from stacking E1 itself: the given domain, the window statistics and per-language boundaries take it to 0.958. arXiv, for example, goes from 0.63 to 0.97.
   - The other six members add only +0.001 together. Each one-at-a-time drop changes the score by ≤ 0.001, which is noise on 27k rows. X1 has the largest drop (−0.0009).
   - E1 and the TF-IDF models are both wrong on only 2.2–3.1% of texts.
   - **X7** adds +0.0016 on top of E1, the only member that adds more than noise once E1 is in, mostly on human and fusion. Without E1 it adds +0.019 (0.9050 → 0.9243).
+  - **E2** adds +0.0044 (0.9612 → 0.9656), the largest gain of any member after E1. Fusion→human errors fall from 588 to 515 and human→fusion from 224 to 207. E1 and E2 together already reach 0.9638.
   - **X8 and S1** change the full ensemble by −0.0002 to +0.0003, which is noise, so they are not in `ensemble.yaml`. Without E1 they add +0.005 (0.9243 → 0.9292), so they are useful only for a CPU-only pipeline.
   - **First/last-window columns (idea from the fusion position finding):** they add nothing (0.9597 without them vs 0.9596 with them). The window max/min/std already carries this signal.
   - DE gutenberg has only 39 validation texts (1 human, 2 fusion), so its per-domain score (0.5 or 1.0) carries no information.
@@ -200,11 +220,12 @@ Basis:
 |---|---|---|---|---|
 | E1 encoder (train on 245k texts + predict val/test) | 1.5–2 h | 35–50 min | 20–30 min | about 11–13 GB at batch 16 |
 | X3 LM features (40k train + 27k val + 25k test texts) | 1.5–2 h | 30–45 min | 15–20 min | about 8 GB at batch 8 |
-| E2 token encoder (train on 208k texts + predict val/test over whole texts) | about 2–2.5 h (from E1's measured 2.06 it/s: 12,983 steps ≈ 1 h 45 min, plus 118k prediction windows ≈ 25 min) | 40–55 min | 20–30 min | as E1 |
-| **total** | **5–6.5 h** | **1.5–2.5 h** | **1–1.5 h** | |
+| E2 token encoder (train on 208k texts + predict val/test over whole texts) | 2 h 20 min (measured) | 40–55 min | 20–30 min | as E1 |
+| **total** | **7 h 10 min (measured: E1 2 h 28 min + X3 2 h 23 min + E2 2 h 20 min)** | **1.5–2.5 h** | **1–1.5 h** | |
 
 - Both GPU runs fit in single Kaggle sessions (12 h limit, 30 GPU-h per week). Pick a T4, not a P100, which has no fast fp16.
-- E1, measured on a Colab T4 on 22 Nov 2026: 8,888 s (2 h 28 min) for training plus prediction, of which training is about 2 h 04 min (15,320 steps at 2.06 it/s, fp16, batch 16). Re-predicting val + test from the saved model to add the window table took about 24 min (106k windows). Measured GPU time for E1 + X3 in total: about 5 h 15 min on a T4.
+- E1, measured on a Colab T4 on 22 Nov 2026: 8,888 s (2 h 28 min) for training plus prediction, of which training is about 2 h 04 min (15,320 steps at 2.06 it/s, fp16, batch 16). Re-predicting val + test from the saved model to add the window table took about 24 min (106k windows). Measured GPU time for E1 + X3 in total: about 5 h 15 min on a T4 (with the re-prediction), and about 7 h 35 min with E2.
+- E2, measured on a Colab T4 on 23 Nov 2026: 8,412 s (2 h 20 min) for data preparation, training (12,983 steps, fp16, batch 16) and prediction over 118k windows.
 - X3 full feature run, measured on a Colab T4 on 22 Nov 2026: 40k train + 27,234 val + 25,000 test texts in 8,555 s (2 h 23 min). The X3 classifier takes 6 s on CPU, and one X4 run 60–90 s and about 6.5 GB of RAM.
 - X3 crop ablation, run on a Colab T4 on 22 Nov 2026 (`lm_crop_start.yaml` / `lm_crop_middle.yaml`; 10k train + 6k val + 6k test each; about 32 min per arm, 64 min in total). The X3 classifier was fitted on CPU for each crop on its train features.
 
@@ -247,7 +268,7 @@ Basis:
   - split construction and audit
   - B0 on the full data with the first grid
   - tokenizer fertility on 3,000 texts per language
-  - E1 and X3 features on a Colab T4, including the CUDA fp16 branches
+  - E1, E2 and X3 features on a Colab T4, including the CUDA fp16 branches
   - X5, X6, X7, X8, S1, the X3 classifier and X4/X4b with all members, on copies of the real outputs
 - **Run as CPU smoke tests on small subsets:**
   - E1 training and inference
