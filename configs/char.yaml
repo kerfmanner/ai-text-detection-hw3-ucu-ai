@@ -1,0 +1,16 @@
+id: X6
+reference: B0
+change: "character n-grams (char_wb 3-5, cased, first 2000 characters) instead of word n-grams, small C search"
+notes: "added as a diverse ensemble member: splits text differently from the word models; trained on a 120k subsample (11.2 GB peak, about 2 min; macro-F1 0.763 at 20k, 0.792 at 60k, 0.808 at 120k)"
+seed: 42
+search_docs: 20000
+fit_docs: 120000
+features:
+  char35: {analyzer: char_wb, ngram_range: [3, 5], lowercase: false, max_chars: 2000}
+grid:
+  features: [[char35]]
+  models:
+    - {name: linear_svc, C: 0.1, class_weight: balanced}
+    - {name: linear_svc, C: 0.3, class_weight: balanced}
+    - {name: linear_svc, C: 1.0, class_weight: balanced}
+smoke: {search_docs: 1500, fit_docs: 3000, eval_docs: 1000}

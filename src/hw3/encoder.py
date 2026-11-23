@@ -57,26 +57,23 @@ def class_weights(y, mode, device):
     return torch.tensor(len(y) / (len(LABELS) * counts), dtype=torch.float32, device=device)
 
 
-def fit(cfg, model, tok, docs, y, device):
-    body, bs, accum = cfg["max_len"] - 2, cfg["batch_size"], cfg["grad_accum"]
-    total = max(1, cfg["epochs"] * math.ceil(len(docs) / bs) // accum)
+def train_loop(cfg, model, n_docs, make_batch, weight, device):
+    bs, accum = cfg["batch_size"], cfg["grad_accum"]
+    total = max(1, cfg["epochs"] * math.ceil(n_docs / bs) // accum)
     warm = max(1, int(total * cfg["warmup_ratio"]))
     opt = torch.optim.AdamW(model.parameters(), lr=cfg["lr"], weight_decay=cfg["weight_decay"])
     sched = torch.optim.lr_scheduler.LambdaLR(opt, lambda s: min((s + 1) / warm, max(0.0, (total - s) / max(1, total - warm))))
     dtype = amp_dtype(device)
     scaler = torch.amp.GradScaler(enabled=dtype == torch.float16)
-    weight = class_weights(y, cfg["class_weights"], device)
     rng = np.random.default_rng(cfg["seed"])
     model.train()
     for epoch in range(cfg["epochs"]):
-        order = rng.permutation(len(docs))
+        order = rng.permutation(n_docs)
         for step, start in enumerate(tqdm(range(0, len(order), bs), desc=f"train epoch {epoch}", mininterval=30)):
-            idx = order[start : start + bs]
-            offsets = [rng.integers(0, max(len(docs[i]) - body, 0) + 1) for i in idx]
-            ids, mask = batchify([docs[i][o : o + body] for i, o in zip(idx, offsets)], tok, device)
+            ids, mask, y = make_batch(order[start : start + bs], rng)
             with torch.autocast(device.type, dtype=dtype, enabled=dtype is not None):
                 logits = model(input_ids=ids, attention_mask=mask).logits
-            loss = F.cross_entropy(logits.float(), torch.as_tensor(y[idx], device=device), weight=weight)
+            loss = F.cross_entropy(logits.float().reshape(-1, logits.shape[-1]), y.reshape(-1), weight=weight, ignore_index=-100)
             scaler.scale(loss / accum).backward()
             if (step + 1) % accum == 0:
                 scaler.unscale_(opt)
@@ -86,11 +83,22 @@ def fit(cfg, model, tok, docs, y, device):
                 opt.zero_grad(set_to_none=True)
                 sched.step()
             if step % cfg["log_every"] == 0:
-                log.info("epoch %d step %d/%d loss %.4f lr %.2e", epoch, step, math.ceil(len(docs) / bs), loss.item(), sched.get_last_lr()[0])
+                log.info("epoch %d step %d/%d loss %.4f lr %.2e", epoch, step, math.ceil(n_docs / bs), loss.item(), sched.get_last_lr()[0])
+
+
+def fit(cfg, model, tok, docs, y, device):
+    body = cfg["max_len"] - 2
+
+    def make_batch(idx, rng):
+        offsets = [rng.integers(0, max(len(docs[i]) - body, 0) + 1) for i in idx]
+        ids, mask = batchify([docs[i][o : o + body] for i, o in zip(idx, offsets)], tok, device)
+        return ids, mask, torch.as_tensor(y[idx], device=device)
+
+    train_loop(cfg, model, len(docs), make_batch, class_weights(y, cfg["class_weights"], device), device)
 
 
 @torch.no_grad()
-def predict(cfg, model, tok, docs, langs, device):
+def window_probs(cfg, model, tok, docs, langs, device):
     body, dtype = cfg["max_len"] - 2, amp_dtype(device)
     items = [(d, s) for d, (toks, lang) in enumerate(zip(docs, langs)) for s in window_starts(len(toks), body, cfg["max_chunks"][lang])]
     order = sorted(range(len(items)), key=lambda k: len(docs[items[k][0]]) - items[k][1])
@@ -104,19 +112,32 @@ def predict(cfg, model, tok, docs, langs, device):
         probs[ks] = logits.float().softmax(-1).cpu().numpy()
         if start // cfg["eval_batch_size"] % cfg["log_every"] == 0:
             log.info("predict %d/%d windows", start, len(items))
-    chunks = pd.DataFrame(probs, columns=LABELS).assign(doc=[d for d, _ in items])
-    stats = chunks.groupby("doc")[LABELS].agg(["mean", "max", "min", "std"]).fillna(0)
+    return pd.DataFrame(probs, columns=LABELS).assign(doc=[d for d, _ in items], start=[s for _, s in items])
+
+
+def window_stats(windows):
+    stats = windows.groupby("doc")[LABELS].agg(["mean", "max", "min", "std", "first", "last"]).fillna(0)
     stats.columns = [label if stat == "mean" else f"{label}_{stat}" for label, stat in stats.columns]
-    return stats.assign(n_chunks=chunks.groupby("doc").size()).reset_index(drop=True)
+    return stats.assign(n_chunks=windows.groupby("doc").size()).reset_index(drop=True)
+
+
+def eval_parts(cfg):
+    val = splits()[1]
+    return {"val": subsample(val, cfg["eval_docs"], cfg["seed"]), "test": subsample(load_test(), cfg["eval_docs"], cfg["seed"])}
+
+
+def predict_parts(cfg, model, tok, parts, device):
+    for part, df in parts.items():
+        windows = window_probs(cfg, model, tok, tokenize(tok, df.text), df.lang.to_numpy(), device)
+        windows.assign(id=df.id.to_numpy()[windows.doc]).drop(columns="doc").to_parquet(art("features", f"{cfg['id']}_windows_{part}.parquet"), index=False)
+        save_preds(cfg["id"], part, window_stats(windows).assign(id=df.id.to_numpy()))
 
 
 def run(cfg):
     setup_logging(cfg["id"])
     seed_everything(cfg["seed"])
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    train, val = splits()
-    train = subsample(train, cfg["train_docs"], cfg["seed"])
-    parts = {"val": subsample(val, cfg["eval_docs"], cfg["seed"]), "test": subsample(load_test(), cfg["eval_docs"], cfg["seed"])}
+    train = subsample(splits()[0], cfg["train_docs"], cfg["seed"])
     with track(cfg["id"], cfg) as info:
         tok = AutoTokenizer.from_pretrained(cfg["model_name"])
         model = AutoModelForSequenceClassification.from_pretrained(
@@ -127,9 +148,17 @@ def run(cfg):
         if cfg["save_model"]:
             model.save_pretrained(art("models", cfg["id"]))
             tok.save_pretrained(art("models", cfg["id"]))
-        for part, df in parts.items():
-            out = predict(cfg, model, tok, tokenize(tok, df.text), df.lang.to_numpy(), device)
-            save_preds(cfg["id"], part, out.assign(id=df.id.to_numpy()))
+        predict_parts(cfg, model, tok, eval_parts(cfg), device)
+    return info
+
+
+def repredict(cfg):
+    setup_logging(cfg["id"] + "_repredict")
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    with track(cfg["id"] + "_repredict", cfg) as info:
+        tok = AutoTokenizer.from_pretrained(art("models", cfg["id"]))
+        model = AutoModelForSequenceClassification.from_pretrained(art("models", cfg["id"])).to(device)
+        predict_parts(cfg, model, tok, eval_parts(cfg), device)
     return info
 
 
@@ -137,6 +166,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", default="encoder")
     parser.add_argument("--smoke", action="store_true")
+    parser.add_argument("--repredict", action="store_true")
     args = parser.parse_args()
     set_smoke(args.smoke)
-    print(run(load_config(args.config)))
+    print((repredict if args.repredict else run)(load_config(args.config)))

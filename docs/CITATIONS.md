@@ -21,7 +21,11 @@ No code was copied from external sources; everything in `src/` and `notebooks/` 
 | token log-probability statistics (`lm.py`) | Gehrmann, Strobelt, Rush. *GLTR: Statistical Detection and Visualization of Generated Text.* ACL 2019 demo |
 | observer/performer cross-perplexity ratio (`lm.py`) | Hans et al. *Spotting LLMs With Binoculars: Zero-Shot Detection of Machine-Generated Text.* ICML 2024 |
 | segment-level likelihood spread for partly rewritten text (`lm.py`) | Wang et al. *SeqXGPT: Sentence-Level AI-Generated Text Detection.* EMNLP 2023 (idea only) |
-| stacking with out-of-fold predictions (`ensemble.py`) | Wolpert. *Stacked Generalization.* Neural Networks 5(2), 1992 |
+| stacking with out-of-fold predictions (`ensemble.py`: X4, S1) | Wolpert. *Stacked Generalization.* Neural Networks 5(2), 1992 |
+| error overlap / diversity of ensemble members (`runs.error_overlap`) | Kuncheva & Whitaker. *Measures of Diversity in Classifier Ensembles and Their Relationship with the Ensemble Accuracy.* Machine Learning 51, 2003 |
+| label cascade, coarse then fine decision (`tfidf.run_cascade`) | Silla & Freitas. *A Survey of Hierarchical Classification Across Different Application Domains.* Data Mining and Knowledge Discovery 22, 2011 |
+| character n-gram features for style (X6) | Stamatatos. *A Survey of Modern Authorship Attribution Methods.* JASIST 60(3), 2009 |
+| text distortion / masked n-grams (X8) | Stamatatos. *Authorship Attribution Using Text Distortion.* EACL 2017 |
 | histogram gradient boosting (`lm.py`, `ensemble.py`) | Ke et al. *LightGBM.* NeurIPS 2017 (scikit-learn `HistGradientBoostingClassifier` is based on it) |
 
 ## Pretrained weights (open-weight, via Hugging Face)

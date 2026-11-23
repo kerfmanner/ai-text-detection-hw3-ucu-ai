@@ -1,3 +1,4 @@
+import itertools
 import json
 import os
 import platform
@@ -83,6 +84,16 @@ def compare(model_ids, by=("lang", "domain")):
         r = val_report(m)
         table[m] = by_group(pd.concat([r.assign(**{c: "all" for c in by}), r]), by).macro_f1
     return pd.DataFrame(table)
+
+
+
+def error_overlap(model_ids):
+    wrong = {m: val_report(m).set_index("id").pipe(lambda r: r.pred != r.label) for m in model_ids if has_preds(m, "val")}
+    rows = {}
+    for a, b in itertools.combinations(wrong, 2):
+        wa, wb = wrong[a].align(wrong[b], join="inner")
+        rows[(a, b)] = {"n": len(wa), "both_wrong": (wa & wb).mean(), "only_one_wrong": (wa ^ wb).mean()}
+    return pd.DataFrame(rows).T.astype({"n": int}).round(4)
 
 
 def export_outputs(name, patterns):

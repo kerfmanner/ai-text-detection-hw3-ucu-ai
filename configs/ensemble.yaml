@@ -1,13 +1,14 @@
 id: X4
 reference: B0
-change: "two-stage stacked ensemble: stage-1 domain + per-language gradient-boosting stacker over member scores, encoder window stats, LM and text-statistic features"
+change: "two-stage stacked ensemble: stage 1 diverse base models (word/char TF-IDF, per-language, per-domain, label cascade, sentence model, encoder, LM features); stage 2 per-language gradient-boosting stacker over their scores, the given domain, encoder window stats, LM and text-statistic features"
 notes: "stacker is trained and scored with group k-fold inside the validation split (out-of-fold predictions), then refit on all validation rows for test"
 seed: 42
-members: [B0, X1, X2, E1, X3]
-domain_source: predicted
-lm_features: true
+members: [B0, X1, X2g, X5, X6, X7, E1, E2, X3]
+domain_source: given
+lm_features: false
 text_stats: true
 stack_by: lang
 folds: 5
 model: {max_iter: 300, learning_rate: 0.05, max_leaf_nodes: 15, l2_regularization: 1.0}
+bias: {id: X4b, reference: X4, change: "X4 plus per-language class offsets added to the stacker log-probabilities, tuned for macro-F1 by grid search", notes: "offsets for each validation fold are tuned on the other folds' out-of-fold predictions, so the validation score stays out-of-sample; test uses offsets tuned on all validation rows", grid: [-1.0, 1.0, 41]}
 smoke: {eval_docs: 1000}

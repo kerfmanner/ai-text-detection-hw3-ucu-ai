@@ -1,0 +1,7 @@
+id: X5
+reference: B0
+change: "two-stage label cascade: stage 1 ai vs not-ai, stage 2 human-vs-fusion specialist trained only on human and fusion texts (B0 features and model)"
+notes: "replaces domain routing as the two-stage idea (domain is given in test); B0's human/fusion boundaries also have to separate ai texts, the specialist only separates the hard pair"
+seed: 42
+fit_docs: null
+smoke: {fit_docs: 4000, eval_docs: 1000}

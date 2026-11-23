@@ -1,0 +1,13 @@
+id: X7
+reference: B0
+change: "two-stage sentence model: stage 1 labels each sentence original / rewritten / ai (B0 features), trained on sentence labels derived from train fusion texts and their human source by word 3-gram overlap; stage 2 gradient boosting over per-text summaries of the sentence scores"
+notes: "half of the train fusion texts have a human source (TF-IDF neighbour, cosine >= split link_threshold); their sentences are bimodal (about 77% copied unchanged, 15-23% fully rewritten). Stage 1 and stage 2 are fitted on disjoint train groups, so stage 2 sees sentence scores as on val/test"
+seed: 42
+stage1_docs: 100000
+stage2_docs: 60000
+min_words: 4
+rewritten_below: 0.3
+kept_above: 0.99
+sentence_model: {name: linear_svc, C: 0.3, class_weight: balanced}
+doc_model: {max_iter: 300, learning_rate: 0.05, max_leaf_nodes: 31, l2_regularization: 1.0}
+smoke: {stage1_docs: 3000, stage2_docs: 2000, eval_docs: 1000}

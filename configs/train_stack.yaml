@@ -1,0 +1,13 @@
+id: S1
+reference: B0
+change: "stacker trained on the train part: 5-fold group out-of-fold scores of the linear TF-IDF members over all train texts, plus the given domain and text stats, per-language gradient boosting; used as one input of the validation stacker X4"
+notes: "the X4 stacker only has 27k validation rows (5k German); S1 learns how to combine the linear members on 245k rows. Val/test inputs are the members' usual full-train predictions. Member OOF scores are cached as preds/<member>_trainoof.parquet; delete them after re-running a member"
+seed: 42
+members: [B0, X6, X8]
+folds: 5
+train_docs: null
+domain_source: given
+lm_features: false
+text_stats: true
+model: {max_iter: 300, learning_rate: 0.05, max_leaf_nodes: 31, l2_regularization: 1.0}
+smoke: {train_docs: 6000, eval_docs: 1000}

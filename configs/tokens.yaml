@@ -1,0 +1,23 @@
+id: E2
+reference: E1
+change: "token-level XLM-R base: every token is tagged original / rewritten / ai, with labels from train fusion texts and their human source (a word is rewritten when none of its word 3-grams occurs in the source); per-text summaries of the token probabilities go to the stacker"
+notes: "targets lightly rewritten fusion: X4 calls 44% of validation fusion texts with <= 5% rewritten words human. Fusion texts without a known source are left out of training; fusion training windows contain a rewritten token with probability `focus`; prediction covers the whole text with overlapping windows. Standalone scores: ai = mean ai probability, fusion = (1 - ai) * max of the `smooth`-token moving average of the rewritten probability"
+seed: 42
+model_name: FacebookAI/xlm-roberta-base
+max_len: 512
+stride: 384
+train_docs: null
+eval_docs: null
+epochs: 1
+batch_size: 16
+eval_batch_size: 64
+grad_accum: 1
+lr: 2.0e-5
+weight_decay: 0.01
+warmup_ratio: 0.06
+focus: 0.8
+weight_power: 0.5
+smooth: 16
+log_every: 200
+save_model: true
+smoke: {train_docs: 48, eval_docs: 24, max_len: 64, stride: 48, batch_size: 8, eval_batch_size: 16, log_every: 1, save_model: false, smooth: 4}

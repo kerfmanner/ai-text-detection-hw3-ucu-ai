@@ -1,10 +1,11 @@
 import json
+import re
 
 import numpy as np
 import pandas as pd
 from joblib import Parallel, delayed
 from scipy.sparse import hstack, vstack
-from sklearn.feature_extraction.text import HashingVectorizer, TfidfTransformer
+from sklearn.feature_extraction.text import CountVectorizer, HashingVectorizer, TfidfTransformer
 from sklearn.naive_bayes import ComplementNB
 from sklearn.svm import LinearSVC
 
@@ -14,13 +15,28 @@ from .metrics import evaluate
 from .runs import save_preds, save_run, to_labels, track
 
 MODELS = {"linear_svc": LinearSVC, "complement_nb": ComplementNB}
+TOKEN = re.compile(r"\w+|[^\w\s]")
 
 
-def hash_counts(spec, texts):
+def top_words(texts, k):
+    sample = texts.sample(min(len(texts), 20000), random_state=0)
+    return set(CountVectorizer(max_features=k, token_pattern=r"(?u)\b\w+\b").fit(sample).vocabulary_)
+
+
+def distort(texts, keep):
+    return [" ".join(t if t.lower() in keep or not t[0].isalnum() else "*" * len(t) for t in TOKEN.findall(x)) for x in texts]
+
+
+def count_part(hv, texts, keep):
+    return hv.transform(distort(texts, keep) if keep else texts)
+
+
+def hash_counts(spec, texts, keep=None):
     hv = HashingVectorizer(
         analyzer=spec["analyzer"],
         ngram_range=tuple(spec["ngram_range"]),
         lowercase=spec["lowercase"],
+        token_pattern=spec.get("token_pattern", r"(?u)\b\w\w+\b"),
         n_features=2**21,
         alternate_sign=False,
         norm=None,
@@ -28,7 +44,7 @@ def hash_counts(spec, texts):
     )
     texts = texts.str[: spec["max_chars"]] if spec.get("max_chars") else texts
     parts = np.array_split(texts.to_numpy(), max(1, len(texts) // 5000))
-    return vstack(Parallel(n_jobs=-1)(delayed(hv.transform)(p) for p in parts)).tocsr()
+    return vstack(Parallel(n_jobs=-1)(delayed(count_part)(hv, p, keep) for p in parts)).tocsr()
 
 
 class Features:
@@ -36,12 +52,13 @@ class Features:
         self.specs = specs
 
     def fit_transform(self, texts):
-        counts = [hash_counts(s, texts) for s in self.specs]
+        self.keep = [top_words(texts, s["keep_words"]) if s.get("keep_words") else None for s in self.specs]
+        counts = [hash_counts(s, texts, k) for s, k in zip(self.specs, self.keep)]
         self.tfidf = [TfidfTransformer(sublinear_tf=True).fit(c) for c in counts]
         return hstack([t.transform(c) for t, c in zip(self.tfidf, counts)]).tocsr()
 
     def transform(self, texts):
-        return hstack([t.transform(hash_counts(s, texts)) for t, s in zip(self.tfidf, self.specs)]).tocsr()
+        return hstack([t.transform(hash_counts(s, texts, k)) for t, s, k in zip(self.tfidf, self.specs, self.keep)]).tocsr()
 
 
 def make_model(spec):
@@ -113,9 +130,13 @@ def run_lang_tuned(cfg):
     return grids
 
 
+def reference_best(cfg):
+    return json.loads(art("runs", f"{cfg['reference']}.json").read_text())["best"]
+
+
 def run_two_stage(cfg):
     train, val, test = load_data(cfg)
-    ref = json.loads(art("runs", f"{cfg['reference']}.json").read_text())["best"]
+    ref = reference_best(cfg)
     domain_of = lambda df: df.lang + "|" + df.domain
     with track(cfg["id"], cfg) as info:
         fit = subsample(train, cfg["fit_docs"], cfg["seed"])
@@ -142,3 +163,19 @@ def run_two_stage(cfg):
             if run_id != cfg["id"]:
                 save_run(run_id, {**cfg, "change": cfg["change_" + routing]}, status="ok")
     return routes
+
+
+def run_cascade(cfg):
+    train, val, test = load_data(cfg)
+    ref = reference_best(cfg)
+    with track(cfg["id"], cfg):
+        fit = subsample(train, cfg["fit_docs"], cfg["seed"])
+        feats = Features(ref["features"])
+        Xtr, ai = feats.fit_transform(fit.text), (fit.label == "ai").to_numpy()
+        stage1 = make_model(ref["model"]).fit(Xtr, ai)
+        stage2 = make_model(ref["model"]).fit(Xtr[~ai], fit.label.to_numpy()[~ai] == "fusion")
+        for part, df in {"val": val, "test": test}.items():
+            X = feats.transform(df.text)
+            s1, s2 = stage1.decision_function(X), stage2.decision_function(X)
+            out = {"human": -s1 - np.maximum(s2, 0), "ai": s1, "fusion": -s1 - np.maximum(-s2, 0), "id": df.id.to_numpy()}
+            save_preds(cfg["id"], part, pd.DataFrame(out))

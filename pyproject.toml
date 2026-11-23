@@ -16,6 +16,7 @@ dependencies = [
     "sentencepiece==0.2.3",
     "protobuf==7.36.2",
     "kaggle==2.2.5",
+    "six>=1.17.0",
 ]
 
 [dependency-groups]
