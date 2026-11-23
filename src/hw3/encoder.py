@@ -57,20 +57,42 @@ def class_weights(y, mode, device):
     return torch.tensor(len(y) / (len(LABELS) * counts), dtype=torch.float32, device=device)
 
 
+def save_checkpoint(path, state):
+    tmp = path.with_suffix(".tmp")
+    torch.save(state, tmp)
+    tmp.replace(path)
+
+
+def load_checkpoint(path, model, opt, sched, scaler, rng):
+    state = torch.load(path, map_location="cpu", weights_only=False)
+    model.load_state_dict(state["model"])
+    opt.load_state_dict(state["opt"])
+    sched.load_state_dict(state["sched"])
+    scaler.load_state_dict(state["scaler"])
+    rng.bit_generator.state = state["rng"]
+    log.info("resumed from epoch %d step %d", state["epoch"], state["step"])
+    return state
+
+
 def train_loop(cfg, model, n_docs, make_batch, weight, device):
-    bs, accum = cfg["batch_size"], cfg["grad_accum"]
-    total = max(1, cfg["epochs"] * math.ceil(n_docs / bs) // accum)
+    bs, accum, every = cfg["batch_size"], cfg["grad_accum"], cfg.get("checkpoint_every")
+    steps = math.ceil(n_docs / bs)
+    total = max(1, cfg["epochs"] * steps // accum)
     warm = max(1, int(total * cfg["warmup_ratio"]))
     opt = torch.optim.AdamW(model.parameters(), lr=cfg["lr"], weight_decay=cfg["weight_decay"])
     sched = torch.optim.lr_scheduler.LambdaLR(opt, lambda s: min((s + 1) / warm, max(0.0, (total - s) / max(1, total - warm))))
     dtype = amp_dtype(device)
     scaler = torch.amp.GradScaler(enabled=dtype == torch.float16)
     rng = np.random.default_rng(cfg["seed"])
+    ckpt = art("checkpoints", f"{cfg['id']}.pt") if every else None
+    state = load_checkpoint(ckpt, model, opt, sched, scaler, rng) if ckpt and ckpt.exists() else {"epoch": 0}
     model.train()
-    for epoch in range(cfg["epochs"]):
-        order = rng.permutation(n_docs)
-        for step, start in enumerate(tqdm(range(0, len(order), bs), desc=f"train epoch {epoch}", mininterval=30)):
-            ids, mask, y = make_batch(order[start : start + bs], rng)
+    for epoch in range(state["epoch"], cfg["epochs"]):
+        resumed = "order" in state and epoch == state["epoch"]
+        order = state["order"] if resumed else rng.permutation(n_docs)
+        first = state["step"] if resumed else 0
+        for step in tqdm(range(first, steps), desc=f"train epoch {epoch}", initial=first, total=steps, mininterval=30):
+            ids, mask, y = make_batch(order[step * bs : (step + 1) * bs], rng)
             with torch.autocast(device.type, dtype=dtype, enabled=dtype is not None):
                 logits = model(input_ids=ids, attention_mask=mask).logits
             loss = F.cross_entropy(logits.float().reshape(-1, logits.shape[-1]), y.reshape(-1), weight=weight, ignore_index=-100)
@@ -83,7 +105,12 @@ def train_loop(cfg, model, n_docs, make_batch, weight, device):
                 opt.zero_grad(set_to_none=True)
                 sched.step()
             if step % cfg["log_every"] == 0:
-                log.info("epoch %d step %d/%d loss %.4f lr %.2e", epoch, step, math.ceil(n_docs / bs), loss.item(), sched.get_last_lr()[0])
+                log.info("epoch %d step %d/%d loss %.4f lr %.2e", epoch, step, steps, loss.item(), sched.get_last_lr()[0])
+            if ckpt and (step + 1) % every == 0:
+                weights = {"model": model.state_dict(), "opt": opt.state_dict(), "sched": sched.state_dict(), "scaler": scaler.state_dict()}
+                save_checkpoint(ckpt, weights | {"rng": rng.bit_generator.state, "order": order, "epoch": epoch, "step": step + 1})
+    if ckpt:
+        ckpt.unlink(missing_ok=True)
 
 
 def fit(cfg, model, tok, docs, y, device):

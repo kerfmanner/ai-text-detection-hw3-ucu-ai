@@ -1,0 +1,24 @@
+id: E3
+reference: E2
+change: "E2 with mDeBERTa-v3-base instead of XLM-R base: same original / rewritten / ai token tags, training windows and per-text summaries; a different architecture and tokenizer for the stacker"
+notes: "E2's errors trace to the token model (missed light rewrites get about 0.45 rewritten probability, human blogs called fusion carry a confident false spike), not to its summaries. Needs bf16 (L4/A100): mDeBERTa is known to overflow in fp16. Batch 8 x 2 accumulation keeps E2's effective batch within 24 GB; checkpoints every checkpoint_every micro-batches so a Colab session can resume"
+seed: 42
+model_name: microsoft/mdeberta-v3-base
+max_len: 512
+stride: 384
+train_docs: null
+eval_docs: null
+epochs: 1
+batch_size: 8
+eval_batch_size: 32
+grad_accum: 2
+lr: 2.0e-5
+weight_decay: 0.01
+warmup_ratio: 0.06
+focus: 0.8
+weight_power: 0.5
+smooth: 16
+log_every: 400
+checkpoint_every: 3000
+save_model: true
+smoke: {train_docs: 48, eval_docs: 24, max_len: 64, stride: 48, batch_size: 8, eval_batch_size: 16, grad_accum: 1, log_every: 1, save_model: false, smooth: 4, checkpoint_every: null}

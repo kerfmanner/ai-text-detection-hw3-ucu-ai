@@ -112,6 +112,15 @@ def token_f1(probs, tags):
     return dict(zip(TAGS, f1_score(true[keep], pred[keep], labels=[0, 1, 2], average=None).round(4).tolist()))
 
 
+def predict_parts(cfg, model, tok, sources, device, info):
+    for part, df in eval_parts(cfg).items():
+        ids, tags = encode(tok, df, sources if part == "val" else None)
+        probs = token_probs(cfg, model, tok, ids, device)
+        if part == "val":
+            info["token_f1_val"] = token_f1(probs, tags)
+        save_preds(cfg["id"], part, doc_frame(probs, cfg["smooth"]).assign(id=df.id.to_numpy()))
+
+
 def run(cfg):
     setup_logging(cfg["id"])
     seed_everything(cfg["seed"])
@@ -129,12 +138,17 @@ def run(cfg):
         if cfg["save_model"]:
             model.save_pretrained(art("models", cfg["id"]))
             tok.save_pretrained(art("models", cfg["id"]))
-        for part, df in eval_parts(cfg).items():
-            ids, tags = encode(tok, df, sources if part == "val" else None)
-            probs = token_probs(cfg, model, tok, ids, device)
-            if part == "val":
-                info["token_f1_val"] = token_f1(probs, tags)
-            save_preds(cfg["id"], part, doc_frame(probs, cfg["smooth"]).assign(id=df.id.to_numpy()))
+        predict_parts(cfg, model, tok, sources, device, info)
+    return info
+
+
+def repredict(cfg):
+    setup_logging(cfg["id"] + "_repredict")
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    with track(cfg["id"] + "_repredict", cfg) as info:
+        tok = AutoTokenizer.from_pretrained(art("models", cfg["id"]))
+        model = AutoModelForTokenClassification.from_pretrained(art("models", cfg["id"])).to(device)
+        predict_parts(cfg, model, tok, fusion_sources(), device, info)
     return info
 
 
@@ -142,6 +156,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", default="tokens")
     parser.add_argument("--smoke", action="store_true")
+    parser.add_argument("--repredict", action="store_true")
     args = parser.parse_args()
     set_smoke(args.smoke)
-    print(run(load_config(args.config)))
+    print((repredict if args.repredict else run)(load_config(args.config)))
