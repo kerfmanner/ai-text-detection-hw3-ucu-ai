@@ -14,7 +14,7 @@
 | `src/hw3/textstats.py` | stylometric statistics (EDA and stacker features) |
 | `src/hw3/eda.py` | EDA tables and figures |
 | `src/hw3/tfidf.py` | B0 baseline (also used for X6 char n-grams), X1 per-language models, X2 domain routing and the D1 domain classifier, X5 label cascade, X8 masked n-grams (`keep_words` option) |
-| `src/hw3/tokens.py` | E2 token-level XLM-R and E3 token-level mDeBERTa (original / rewritten / ai tags from fusion/source pairs), CLI `python -m hw3.tokens` (`--config tokens_mdeberta` for E3, `--repredict` re-runs inference from the saved model) |
+| `src/hw3/tokens.py` | E2 token-level XLM-R, E3 token-level mDeBERTa and E4 token-level XLM-R large (original / rewritten / ai tags from fusion/source pairs), CLI `python -m hw3.tokens` (`--config tokens_mdeberta` for E3, `--config tokens_xlmr_large` for E4, `--repredict` re-runs inference from the saved model) |
 | `src/hw3/encoder.py` | E1 chunked XLM-R fine-tuning and inference, CLI `python -m hw3.encoder` (`--repredict` re-runs inference from the saved model) |
 | `src/hw3/lm.py` | X3 LM likelihood features (CLI `python -m hw3.lm`) and their classifier |
 | `src/hw3/sentences.py` | X7 sentence-level model: sentence labels from fusion/source pairs, sentence classifier, per-text summaries |
@@ -36,6 +36,7 @@
 | E1 | fine-tuned XLM-R base, windowed long-text handling | 04 | GPU |
 | E2 | token-level XLM-R: tags rewritten spans, per-text summaries | 04b | GPU |
 | E3 | E2 with mDeBERTa-v3-base (bf16 only: L4 / A100), resumable from Drive checkpoints | 04c | GPU |
+| E4 | E2 with XLM-R large (lr 1e-5, batch 4 × 4 accumulation), resumable from Drive checkpoints | 04d | GPU |
 | X1 | per-language TF-IDF models with per-language search | 06 | CPU |
 | D1 | stage-1 domain classifier (predictions only) | 06 (X2) | CPU |
 | X2 / X2g | two-stage: domain routing to per-domain experts (predicted / given domain) | 06 | CPU |
@@ -62,6 +63,7 @@ Open the notebooks with the `.venv` kernel and run them in order:
 4. `04_encoder` (GPU)
    - `04b_token_encoder` (GPU)
    - `04c_token_mdeberta` (GPU, Colab L4 / A100, artifacts on Google Drive)
+   - `04d_token_xlmr_large` (GPU, Colab L4 / A100, artifacts on Google Drive)
 5. `05_lm_features` (GPU)
 6. `06_experiments`
 7. `07_ensemble_submission` (writes and checks `submission.csv`)
@@ -72,7 +74,7 @@ Open the notebooks with the `.venv` kernel and run them in order:
 - **Kaggle:** push the repo first, including `splits/split.csv` and `splits/fusion_sources.csv`. Open `04_encoder` / `04b_token_encoder` / `05_lm_features`, add the competition as input data, and turn on internet and a GPU. Run all, then download `artifacts/E1_outputs.zip` / `artifacts/E2_outputs.zip` / `artifacts/X3_features_outputs.zip` from the output and unzip them into the local `artifacts/`.
 - **Colab:** same as Kaggle, plus Kaggle credentials (`KAGGLE_API_TOKEN`, or `~/.kaggle/kaggle.json`) for the download. Set `HW3_ARTIFACTS` to a Drive folder to keep outputs if the session dies.
 - **X3 crop ablation (optional, before the full X3 run):** `HW3_ARTIFACTS=$PWD/artifacts/lm_crop_start uv run python -m hw3.lm --config lm_crop_start`, then the same with `middle`; or the optional cell in `05_lm_features`. It compares reading the start vs the middle of texts longer than the token budget.
-- **Colab with Drive (`04c_token_mdeberta`):** the setup cell mounts Google Drive and uses `DRIVE_ARTIFACTS` as `HW3_ARTIFACTS`. Training writes `checkpoints/E3.pt` every `checkpoint_every` micro-batches (`configs/tokens_mdeberta.yaml`) and deletes it at the end, so after a disconnect running all cells again resumes training, or only predicts if the model in `models/E3` is already saved. Copy `preds/E3_*`, `runs/E3*` and `logs/E3*` from Drive into the local `artifacts/`.
+- **Colab with Drive (`04c_token_mdeberta`, `04d_token_xlmr_large`):** the setup cell mounts Google Drive and uses `DRIVE_ARTIFACTS` as `HW3_ARTIFACTS`. Training writes `checkpoints/<id>.pt` every `checkpoint_every` micro-batches (`configs/tokens_mdeberta.yaml`, `configs/tokens_xlmr_large.yaml`) and deletes it at the end, so after a disconnect running all cells again resumes training, or only predicts if the model in `models/<id>` is already saved. Checkpoints take about 3.3 GB (E3) and 6.7 GB (E4) on Drive, up to twice that while being replaced. Copy `preds/<id>_*`, `runs/<id>*` and `logs/<id>*` from Drive into the local `artifacts/`.
 - **Smoke check (any CPU):** `uv run python -m hw3.encoder --smoke`, `uv run python -m hw3.tokens --smoke`, `uv run python -m hw3.lm --smoke`, or `SMOKE = True` in the notebook.
 
 Environment variables: `HW3_DATA` (data folder) and `HW3_ARTIFACTS` (artifacts folder).
